@@ -11,7 +11,7 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 15 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, and publisher-grade print/digital layout export.
+**Fiction Book Agent Skills** is a specialized collection of 16 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, automated daily updates, and publisher-grade print/digital layout export.
 
 ### Installation
 
@@ -31,7 +31,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Agent Taxonomy (15 Specialist Skills)
+### Agent Taxonomy (16 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -50,13 +50,14 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `prose-dialogue-polisher` | Polishes prose rhythm & dialogue subtext. | Trims purple prose, aligns character voice, refines dialogue tags. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Simulates target demographic beta feedback. | Evaluates pacing, first-chapter hook, emotional payoff per reader persona. | `beta_reader_feedback.md` |
 | `fiction-layout-exporter` | Formats print & digital e-book exports. | Publisher-grade DOCX (Novel 13x19 cm, A5, A4) with gutter margins + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
+| `fiction-agent-update-manager` | Automated Git update & security manager. | Pre-update credential leak scanning, guarded `git pull` confirmation, & daily cron checks. | Remote repo update status & prompt alerts. |
 
 ---
 
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 15 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, hingga ekspor tata letak **buku cetak fisik** maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 16 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** maupun **e-book digital**.
 
 ### Panduan Instalasi
 
@@ -76,7 +77,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Daftar Agen & Spesialisasi (15 Skills)
+### Daftar Agen & Spesialisasi (16 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -95,6 +96,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `prose-dialogue-polisher` | Menyunting gaya prosa & dialog. | Memangkas *purple prose*, menyelaraskan *character voice*, menghaluskan dialog. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Mensimulasikan umpan balik pembaca target. | Evaluasi *pacing*, daya pikat (*hook*), & *emotional payoff* per persona pembaca. | `beta_reader_feedback.md` |
 | `fiction-layout-exporter` | Penata letak **Buku Cetak** & **Digital**. | Ekspor `.docx` siap cetak (Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
+| `fiction-agent-update-manager` | Pengelola pembaruan Git & keamanan otomatis. | Pemindaian kebocoran kredensial, notifikasi persetujuan `git pull`, & jadwal cron harian. | Status update remote repo & prompt persetujuan. |
 
 ---
 
