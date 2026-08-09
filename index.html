@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,6 @@
       --border: #e2e8f0;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
       --shadow-md: 0 4px 20px -2px rgba(79, 70, 229, 0.08);
-      --shadow-lg: 0 10px 30px -4px rgba(15, 23, 42, 0.1);
       --font-heading: 'Outfit', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
     }
@@ -44,7 +43,7 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
@@ -88,6 +87,12 @@
       letter-spacing: -0.02em;
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -105,6 +110,32 @@
 
     .nav-links a:hover {
       color: var(--accent);
+    }
+
+    /* Language Switcher Toggle */
+    .lang-switcher {
+      display: flex;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #ffffff;
     }
 
     .btn-github {
@@ -338,7 +369,7 @@
       border-radius: 6px;
     }
 
-    /* Print & Digital Features */
+    /* Publishing Features */
     .section-features {
       padding: 80px 24px;
     }
@@ -445,38 +476,47 @@
         <div class="brand-icon">F</div>
         <span class="brand-name">Fiction Book Agent Skills</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#installation">Instalasi</a></li>
-        <li><a href="#skills">14 Specialist Skills</a></li>
-        <li><a href="#publishing">Layout Cetak & Web</a></li>
-        <li><a href="web_reader/index.html">Live Demo Reader</a></li>
-      </ul>
-      <a href="https://github.com/lensetek/Fiction-book-agent-skills" target="_blank" class="btn-github">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub Repo
-      </a>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="#installation" data-i18n="nav_installation">Installation</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">14 Agent Skills</a></li>
+          <li><a href="#publishing" data-i18n="nav_publishing">Print & Digital Layout</a></li>
+          <li><a href="web_reader/index.html" data-i18n="nav_reader">Live Demo Reader</a></li>
+        </ul>
+
+        <!-- Language Switcher Toggle (EN | ID) -->
+        <div class="lang-switcher">
+          <button id="lang-en-btn" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+          <button id="lang-id-btn" class="lang-btn" onclick="setLanguage('id')">ID</button>
+        </div>
+
+        <a href="https://github.com/lensetek/Fiction-book-agent-skills" target="_blank" class="btn-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Repo
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="badge">🚀 14 Specialist AI Skills for Creative Writers</div>
-    <h1>Tulis Novel, Komik & Buku Cerita <span>Cepat, Konsisten & Siap Terbit</span></h1>
-    <p>Ekosistem AI Agent Skills modular untuk perancangan dunia, psikologi karakter, arsitektur plot 3-Act, penulisan adegan "Show, Don't Tell", riset pasar live internet, hingga ekspor buku cetak fisik & digital e-book.</p>
+    <div class="badge" data-i18n="hero_badge">🚀 14 Specialist AI Skills for Creative Writers</div>
+    <h1 data-i18n="hero_title">Craft Novels, Webtoons & Storybooks <span>Faster, Consistent & Publication-Ready</span></h1>
+    <p data-i18n="hero_subtitle">A modular AI Agent Skills suite for worldbuilding, character psychology, 3-act plot architecture, "Show, Don't Tell" prose, real-time web market research, and physical print/digital e-book layout export.</p>
 
     <!-- Installation Box -->
     <div id="installation" class="cta-card">
-      <div class="cta-header">⚡ Cara Instalasi Utama (CLI)</div>
+      <div class="cta-header" data-i18n="cta_cli_header">⚡ Primary Installation (CLI)</div>
       <div class="cmd-box">
         <span class="cmd-text" id="cmd-install">npx skills add https://github.com/lensetek/Fiction-book-agent-skills</span>
-        <button class="copy-btn" onclick="copyText('cmd-install', this)">Salin CLI</button>
+        <button class="copy-btn" onclick="copyText('cmd-install', this)" data-i18n="btn_copy_cli">Copy CLI Command</button>
       </div>
 
       <div class="alt-cta">
-        <div class="alt-cta-title">💡 Cara Alternatif (Salin Tautan Prompt AI):</div>
+        <div class="alt-cta-title" data-i18n="cta_prompt_header">💡 Alternative Installation (Copy AI Prompt URL):</div>
         <div class="prompt-box">
           <span id="prompt-url">https://github.com/lensetek/Fiction-book-agent-skills</span>
-          <button class="copy-btn" onclick="copyText('prompt-url', this)">Salin URL Prompt</button>
+          <button class="copy-btn" onclick="copyText('prompt-url', this)" data-i18n="btn_copy_url">Copy Prompt URL</button>
         </div>
       </div>
     </div>
@@ -486,92 +526,92 @@
   <section id="skills" class="section-skills">
     <div class="section-container">
       <div class="section-header">
-        <h2>14 Agen Spesialis Fiksi</h2>
-        <p>Bekerja mandiri atau dipandu oleh <strong>`fiction-book-orchestrator`</strong> dari ide awal hingga terbit</p>
+        <h2 data-i18n="skills_header_title">14 Specialist Fiction Agents</h2>
+        <p data-i18n="skills_header_sub">Operate independently or guided by <strong>`fiction-book-orchestrator`</strong> from raw idea to published manuscript</p>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card">
           <div class="skill-icon">🔮</div>
           <div class="skill-name">fiction-book-orchestrator</div>
-          <div class="skill-desc">Koordinator alur kerja penulisan fiksi dari intake ide hingga siap cetak/terbit.</div>
+          <div class="skill-desc" data-i18n="desc_orchestrator">Master workflow manager for fiction projects from concept intake to publisher layout export.</div>
           <span class="skill-tag">Orchestrator</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">📊</div>
           <div class="skill-name">fiction-market-trend-analyst</div>
-          <div class="skill-desc">Riset tren fiksi live di internet (BookTok, Webtoon, KDP), formulasi judul & kata kunci pencarian.</div>
+          <div class="skill-desc" data-i18n="desc_market">Real-time live web research on BookTok/Webtoon/KDP trends, title options, & search tags.</div>
           <span class="skill-tag">Live Market Research</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">🏰</div>
           <div class="skill-name">worldbuilding-architect</div>
-          <div class="skill-desc">Merancang aturan sihir/teknologi, geografi, faksi, dan atmosfer Lore Codex.</div>
+          <div class="skill-desc" data-i18n="desc_world">Designs magic/tech rules, geography, factions, and sensory Lore Codex ambience.</div>
           <span class="skill-tag">Worldbuilding</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">🧠</div>
           <div class="skill-name">character-designer-psychologist</div>
-          <div class="skill-desc">Menyusun profil psikologis tokoh, Want vs Need, fatal flaw, dan character arc.</div>
+          <div class="skill-desc" data-i18n="desc_character">Crafts character psychology, Want vs Need, fatal flaws, and character arc matrices.</div>
           <span class="skill-tag">Character Psychology</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">📐</div>
           <div class="skill-name">plot-narrative-architect</div>
-          <div class="skill-desc">Struktur plot Save the Cat, 3-Act Structure, Hero's Journey, & foreshadowing map.</div>
+          <div class="skill-desc" data-i18n="desc_plot">Structures plots with Save the Cat, 3-Act Structure, Hero's Journey, & foreshadowing map.</div>
           <span class="skill-tag">Plot Architecture</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">🎨</div>
           <div class="skill-name">comic-webtoon-scriptwriter</div>
-          <div class="skill-desc">Skrip panel komik & webtoon vertikal, sudut kamera, SFX, & prompt AI gambar.</div>
+          <div class="skill-desc" data-i18n="desc_comic">Panel breakdown, camera angles, speech balloons, SFX, & AI image prompt generation.</div>
           <span class="skill-tag">Comic & Webtoon</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">🐥</div>
           <div class="skill-name">children-story-creator</div>
-          <div class="skill-desc">Penulisan buku cerita anak, fabel berima, kalibrasi kelompok usia, & brief ilustrasi.</div>
+          <div class="skill-desc" data-i18n="desc_children">Rhyming storybook prose, age group calibration, page spreads, & illustration briefs.</div>
           <span class="skill-tag">Children's Books</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">✍️</div>
           <div class="skill-name">novel-scene-writer</div>
-          <div class="skill-desc">Draf prosa adegan dengan teknik "Show, Don't Tell", detail 5 sensori, & dialog alami.</div>
+          <div class="skill-desc" data-i18n="desc_writer">"Show, Don't Tell" chapter prose drafting, 5-sensory detail palette, & natural dialogue.</div>
           <span class="skill-tag">Prose Drafting</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">🔍</div>
           <div class="skill-name">plot-hole-continuity-checker</div>
-          <div class="skill-desc">Audit garis waktu kronologis, konsistensi aturan dunia, & karakter out-of-character.</div>
+          <div class="skill-desc" data-i18n="desc_continuity">Audits narrative timeline consistency, worldbuilding rules, & character behavior integrity.</div>
           <span class="skill-tag">Continuity Audit</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">✨</div>
           <div class="skill-name">prose-dialogue-polisher</div>
-          <div class="skill-desc">Menghaluskan gaya prosa, memangkas purple prose klise, & menyelaraskan dialog tags.</div>
+          <div class="skill-desc" data-i18n="desc_polisher">Polishes prose rhythm, trims purple prose clichés, & aligns unique character voice tags.</div>
           <span class="skill-tag">Polishing</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">👀</div>
           <div class="skill-name">beta-reader-critique-simulator</div>
-          <div class="skill-desc">Mensimulasikan umpan balik persona pembaca target terhadap pacing & emotional hook.</div>
+          <div class="skill-desc" data-i18n="desc_beta">Simulates target reader persona feedback on pacing, first-chapter hook, & emotional payoff.</div>
           <span class="skill-tag">Beta Reader</span>
         </div>
 
         <div class="skill-card">
           <div class="skill-icon">📖</div>
           <div class="skill-name">fiction-layout-exporter</div>
-          <div class="skill-desc">Penataan letak Buku Cetak DOCX (Novel 13x19 cm & A5) + Mobile Web Reader.</div>
+          <div class="skill-desc" data-i18n="desc_exporter">Publisher print DOCX layout (Novel 13x19 cm & A5) + Mobile Web Reader export.</div>
           <span class="skill-tag">Publisher Export</span>
         </div>
       </div>
@@ -582,33 +622,33 @@
   <section id="publishing" class="section-features">
     <div class="section-container">
       <div class="section-header">
-        <h2>Dukungan Terbit Cetak Fisik & Digital</h2>
-        <p>Naskah otomatis tertata sesuai standar penerbitan nasional & internasional</p>
+        <h2 data-i18n="feat_header_title">Physical Print & Digital Publishing Support</h2>
+        <p data-i18n="feat_header_sub">Manuscripts automatically formatted according to publisher standards</p>
       </div>
 
       <div class="features-grid">
         <div class="feature-box">
-          <h3>📘 Format Buku Cetak Physical Print</h3>
-          <p>Penataan letak otomatis Microsoft Word (.docx) siap kirim ke penerbit cetak:</p>
+          <h3 data-i18n="feat_print_title">📘 Physical Print Book Formatting</h3>
+          <p data-i18n="feat_print_sub">Direct Microsoft Word (.docx) layout generator formatted for print publishers:</p>
           <ul class="feature-list">
-            <li>Preset Ukuran Cetak: Novel 13x19 cm, A5 (14.8x21 cm), A4</li>
-            <li>Marjin Jilid (Gutter Margin) 2.2 cm untuk lekukan jilid lem panas</li>
-            <li>Halaman Ganjil/Genap Berhadapan (Recto/Verso Odd-Even Page Header)</li>
-            <li>Awalan Bab Baru (Chapter Opener) selalu di halaman ganjil (kanan)</li>
-            <li>Daftar Isi Dinamis berbasis Word XML Field Codes</li>
+            <li data-i18n="feat_print_li1">Print Presets: Novel 13x19 cm, A5 (14.8x21 cm), A4</li>
+            <li data-i18n="feat_print_li2">Binding Gutter Margin (2.2 cm inside margin for book binding)</li>
+            <li data-i18n="feat_print_li3">Mirrored Recto/Verso Odd/Even page headers & footers</li>
+            <li data-i18n="feat_print_li4">Odd-page Chapter Openers with 100pt Space-Before titles</li>
+            <li data-i18n="feat_print_li5">Dynamic Word XML Field Code Table of Contents</li>
           </ul>
         </div>
 
         <div class="feature-box">
-          <h3>📱 Format Digital Web Reader & EPUB</h3>
-          <p>Tampilan e-book digital modern responsive mobile-first:</p>
+          <h3 data-i18n="feat_digital_title">📱 Digital Web Reader & EPUB Format</h3>
+          <p data-i18n="feat_digital_sub">Modern responsive mobile-first digital e-book interface:</p>
           <ul class="feature-list">
-            <li>Tema Gelap (Dark Mode), Sepia, & Terang (Light Mode)</li>
-            <li>Interactive Character Codex Pop-up saat nama tokoh di-klik</li>
-            <li>Daftar bab side-drawer navigation & progress bar membaca</li>
-            <li>Dukungan ekspor EPUB terstruktur untuk Amazon Kindle / Google Books</li>
+            <li data-i18n="feat_digital_li1">Dark Mode, Sepia, and Light Theme toggles</li>
+            <li data-i18n="feat_digital_li2">Interactive Character Codex Pop-up when character names are clicked</li>
+            <li data-i18n="feat_digital_li3">Side-drawer Table of Contents & reading progress bar</li>
+            <li data-i18n="feat_digital_li4">Structured EPUB export support for Amazon Kindle / Google Books</li>
           </ul>
-          <a href="web_reader/index.html" class="demo-link-btn">📱 Buka Live Demo Web Reader &rarr;</a>
+          <a href="web_reader/index.html" class="demo-link-btn" data-i18n="btn_demo_reader">📱 Open Live Demo Web Reader &rarr;</a>
         </div>
       </div>
     </div>
@@ -616,16 +656,129 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Fiction Book Agent Skills. Open Source under MIT License.</p>
+    <p data-i18n="footer_copy">&copy; 2026 Fiction Book Agent Skills. Open Source under MIT License.</p>
     <p style="margin-top: 8px;"><a href="https://github.com/lensetek/Fiction-book-agent-skills" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub Repository: lensetek/Fiction-book-agent-skills</a></p>
   </footer>
 
+  <!-- Internationalization (i18n) Script -->
   <script>
+    const translations = {
+      en: {
+        nav_installation: "Installation",
+        nav_skills: "14 Agent Skills",
+        nav_publishing: "Print & Digital Layout",
+        nav_reader: "Live Demo Reader",
+        hero_badge: "🚀 14 Specialist AI Skills for Creative Writers",
+        hero_title: "Craft Novels, Webtoons & Storybooks <span>Faster, Consistent & Publication-Ready</span>",
+        hero_subtitle: "A modular AI Agent Skills suite for worldbuilding, character psychology, 3-act plot architecture, \"Show, Don't Tell\" prose, real-time web market research, and physical print/digital e-book layout export.",
+        cta_cli_header: "⚡ Primary Installation (CLI)",
+        btn_copy_cli: "Copy CLI Command",
+        cta_prompt_header: "💡 Alternative Installation (Copy AI Prompt URL):",
+        btn_copy_url: "Copy Prompt URL",
+        skills_header_title: "14 Specialist Fiction Agents",
+        skills_header_sub: "Operate independently or guided by `fiction-book-orchestrator` from raw idea to published manuscript",
+        desc_orchestrator: "Master workflow manager for fiction projects from concept intake to publisher layout export.",
+        desc_market: "Real-time live web research on BookTok/Webtoon/KDP trends, title options, & search tags.",
+        desc_world: "Designs magic/tech rules, geography, factions, and sensory Lore Codex ambience.",
+        desc_character: "Crafts character psychology, Want vs Need, fatal flaws, and character arc matrices.",
+        desc_plot: "Structures plots with Save the Cat, 3-Act Structure, Hero's Journey, & foreshadowing map.",
+        desc_comic: "Panel breakdown, camera angles, speech balloons, SFX, & AI image prompt generation.",
+        desc_children: "Rhyming storybook prose, age group calibration, page spreads, & illustration briefs.",
+        desc_writer: "\"Show, Don't Tell\" chapter prose drafting, 5-sensory detail palette, & natural dialogue.",
+        desc_continuity: "Audits narrative timeline consistency, worldbuilding rules, & character behavior integrity.",
+        desc_polisher: "Polishes prose rhythm, trims purple prose clichés, & aligns unique character voice tags.",
+        desc_beta: "Simulates target reader persona feedback on pacing, first-chapter hook, & emotional payoff.",
+        desc_exporter: "Publisher print DOCX layout (Novel 13x19 cm & A5) + Mobile Web Reader export.",
+        feat_header_title: "Physical Print & Digital Publishing Support",
+        feat_header_sub: "Manuscripts automatically formatted according to publisher standards",
+        feat_print_title: "📘 Physical Print Book Formatting",
+        feat_print_sub: "Direct Microsoft Word (.docx) layout generator formatted for print publishers:",
+        feat_print_li1: "Print Presets: Novel 13x19 cm, A5 (14.8x21 cm), A4",
+        feat_print_li2: "Binding Gutter Margin (2.2 cm inside margin for book binding)",
+        feat_print_li3: "Mirrored Recto/Verso Odd/Even page headers & footers",
+        feat_print_li4: "Odd-page Chapter Openers with 100pt Space-Before titles",
+        feat_print_li5: "Dynamic Word XML Field Code Table of Contents",
+        feat_digital_title: "📱 Digital Web Reader & EPUB Format",
+        feat_digital_sub: "Modern responsive mobile-first digital e-book interface:",
+        feat_digital_li1: "Dark Mode, Sepia, and Light Theme toggles",
+        feat_digital_li2: "Interactive Character Codex Pop-up when character names are clicked",
+        feat_digital_li3: "Side-drawer Table of Contents & reading progress bar",
+        feat_digital_li4: "Structured EPUB export support for Amazon Kindle / Google Books",
+        btn_demo_reader: "📱 Open Live Demo Web Reader &rarr;",
+        footer_copy: "&copy; 2026 Fiction Book Agent Skills. Open Source under MIT License."
+      },
+      id: {
+        nav_installation: "Instalasi",
+        nav_skills: "14 Agent Skills",
+        nav_publishing: "Layout Cetak & Digital",
+        nav_reader: "Live Demo Reader",
+        hero_badge: "🚀 14 Spesialis AI Agent Skills untuk Penulisan Fiksi",
+        hero_title: "Tulis Novel, Komik & Buku Cerita <span>Cepat, Konsisten & Siap Terbit</span>",
+        hero_subtitle: "Ekosistem AI Agent Skills modular untuk perancangan dunia, psikologi karakter, arsitektur plot 3-Act, penulisan adegan \"Show, Don't Tell\", riset pasar live internet, hingga ekspor buku cetak fisik & digital e-book.",
+        cta_cli_header: "⚡ Cara Instalasi Utama (CLI)",
+        btn_copy_cli: "Salin Perintah CLI",
+        cta_prompt_header: "💡 Cara Alternatif (Salin Tautan Prompt AI):",
+        btn_copy_url: "Salin URL Prompt",
+        skills_header_title: "14 Agen Spesialis Fiksi",
+        skills_header_sub: "Bekerja mandiri atau dipandu oleh `fiction-book-orchestrator` dari ide awal hingga terbit",
+        desc_orchestrator: "Koordinator alur kerja penulisan fiksi dari intake ide hingga siap cetak/terbit.",
+        desc_market: "Riset tren fiksi live di internet (BookTok, Webtoon, KDP), formulasi judul & kata kunci pencarian.",
+        desc_world: "Merancang aturan sihir/teknologi, geografi, faksi, dan atmosfer Lore Codex.",
+        desc_character: "Menyusun profil psikologis tokoh, Want vs Need, fatal flaw, dan character arc.",
+        desc_plot: "Struktur plot Save the Cat, 3-Act Structure, Hero's Journey, & foreshadowing map.",
+        desc_comic: "Skrip panel komik & webtoon vertikal, sudut kamera, SFX, & prompt AI gambar.",
+        desc_children: "Penulisan buku cerita anak, fabel berima, kalibrasi kelompok usia, & brief ilustrasi.",
+        desc_writer: "Draf prosa adegan dengan teknik \"Show, Don't Tell\", detail 5 sensori, & dialog alami.",
+        desc_continuity: "Audit garis waktu kronologis, konsistensi aturan dunia, & karakter out-of-character.",
+        desc_polisher: "Menghaluskan gaya prosa, memangkas purple prose klise, & menyelaraskan dialog tags.",
+        desc_beta: "Mensimulasikan umpan balik persona pembaca target terhadap pacing & emotional hook.",
+        desc_exporter: "Penataan letak Buku Cetak DOCX (Novel 13x19 cm & A5) + Mobile Web Reader.",
+        feat_header_title: "Dukungan Terbit Cetak Fisik & Digital",
+        feat_header_sub: "Naskah otomatis tertata sesuai standar penerbitan nasional & internasional",
+        feat_print_title: "📘 Format Buku Cetak Physical Print",
+        feat_print_sub: "Penataan letak otomatis Microsoft Word (.docx) siap kirim ke penerbit cetak:",
+        feat_print_li1: "Preset Ukuran Cetak: Novel 13x19 cm, A5 (14.8x21 cm), A4",
+        feat_print_li2: "Marjin Jilid (Gutter Margin) 2.2 cm untuk lekukan jilid lem panas",
+        feat_print_li3: "Halaman Ganjil/Genap Berhadapan (Recto/Verso Odd-Even Page Header)",
+        feat_print_li4: "Awalan Bab Baru (Chapter Opener) selalu di halaman ganjil (kanan)",
+        feat_print_li5: "Daftar Isi Dinamis berbasis Word XML Field Codes",
+        feat_digital_title: "📱 Format Digital Web Reader & EPUB",
+        feat_digital_sub: "Tampilan e-book digital modern responsive mobile-first:",
+        feat_digital_li1: "Tema Gelap (Dark Mode), Sepia, & Terang (Light Mode)",
+        feat_digital_li2: "Interactive Character Codex Pop-up saat nama tokoh di-klik",
+        feat_digital_li3: "Daftar bab side-drawer navigation & progress bar membaca",
+        feat_digital_li4: "Dukungan ekspor EPUB terstruktur untuk Amazon Kindle / Google Books",
+        btn_demo_reader: "📱 Buka Live Demo Web Reader &rarr;",
+        footer_copy: "&copy; 2026 Fiction Book Agent Skills. Open Source under MIT License."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      
+      // Toggle button active state
+      document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-id-btn').classList.toggle('active', lang === 'id');
+
+      // Update text nodes
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      localStorage.setItem('fiction_skills_lang', lang);
+    }
+
     function copyText(elementId, btnElement) {
       const textToCopy = document.getElementById(elementId).innerText;
+      const currentLang = document.documentElement.lang || 'en';
+      const successMsg = currentLang === 'id' ? "Tersalin! ✓" : "Copied! ✓";
+      
       navigator.clipboard.writeText(textToCopy).then(() => {
         const originalText = btnElement.innerText;
-        btnElement.innerText = "Tersalin! ✓";
+        btnElement.innerText = successMsg;
         btnElement.style.background = "#10b981";
         setTimeout(() => {
           btnElement.innerText = originalText;
@@ -633,6 +786,12 @@
         }, 2000);
       });
     }
+
+    // Initialize saved language or default to 'en'
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('fiction_skills_lang') || 'en';
+      setLanguage(savedLang);
+    });
   </script>
 </body>
 </html>
