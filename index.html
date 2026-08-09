@@ -385,8 +385,8 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
       margin-top: 40px;
     }
 
@@ -394,8 +394,11 @@
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 36px;
+      padding: 32px;
       box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .feature-box h3 {
@@ -639,26 +642,46 @@
 
       <div class="features-grid">
         <div class="feature-box">
-          <h3 data-i18n="feat_print_title">📘 Physical Print Book Formatting</h3>
-          <p data-i18n="feat_print_sub">Direct Microsoft Word (.docx) layout generator formatted for print publishers:</p>
-          <ul class="feature-list">
-            <li data-i18n="feat_print_li1">Print Presets: Novel 13x19 cm, A5 (14.8x21 cm), A4</li>
-            <li data-i18n="feat_print_li2">Binding Gutter Margin (2.2 cm inside margin for book binding)</li>
-            <li data-i18n="feat_print_li3">Mirrored Recto/Verso Odd/Even page headers & footers</li>
-            <li data-i18n="feat_print_li4">Odd-page Chapter Openers with 100pt Space-Before titles</li>
-            <li data-i18n="feat_print_li5">Dynamic Word XML Field Code Table of Contents</li>
-          </ul>
+          <div>
+            <h3 data-i18n="feat_print_title">📘 Physical Print Book Formatting</h3>
+            <p data-i18n="feat_print_sub">Direct Microsoft Word (.docx) layout generator formatted for print publishers:</p>
+            <ul class="feature-list">
+              <li data-i18n="feat_print_li1">Print Presets: Novel 13x19 cm, A5 (14.8x21 cm), A4</li>
+              <li data-i18n="feat_print_li2">Binding Gutter Margin (2.2 cm inside margin for book binding)</li>
+              <li data-i18n="feat_print_li3">Mirrored Recto/Verso Odd/Even page headers & footers</li>
+              <li data-i18n="feat_print_li4">Odd-page Chapter Openers with 100pt Space-Before titles</li>
+              <li data-i18n="feat_print_li5">Dynamic Word XML Field Code Table of Contents</li>
+            </ul>
+          </div>
         </div>
 
         <div class="feature-box">
-          <h3 data-i18n="feat_fal_title">⚡ Fal.ai (Flux.1) & MCP Image Engine</h3>
-          <p data-i18n="feat_fal_sub">High-speed, high-resolution AI image generation for comic panels, storybooks, & covers:</p>
-          <ul class="feature-list">
-            <li data-i18n="feat_fal_li1">Fal.ai Flux.1 Schnell / Dev / SDXL integration via python helper</li>
-            <li data-i18n="feat_fal_li2">MCP (Model Context Protocol) server config (`mcp_config.json`)</li>
-            <li data-i18n="feat_fal_li3">Strict security: FAL_KEY loaded from environment variables</li>
-            <li data-i18n="feat_fal_li4">Native internal fallback to `generate_image` in Antigravity/Codex</li>
-          </ul>
+          <div>
+            <h3 data-i18n="feat_digital_title">📱 Digital Web Reader (12 Chapters Demo)</h3>
+            <p data-i18n="feat_digital_sub">Modern responsive mobile-first digital e-book interface:</p>
+            <ul class="feature-list">
+              <li data-i18n="feat_digital_li1">Dark Mode, Sepia, and Light Theme toggles</li>
+              <li data-i18n="feat_digital_li2">Interactive Character Codex Pop-up when character names are clicked</li>
+              <li data-i18n="feat_digital_li3">Side-drawer Table of Contents & 12 complete chapter navigation</li>
+              <li data-i18n="feat_digital_li4">Structured EPUB export support for Amazon Kindle / Google Books</li>
+            </ul>
+          </div>
+          <div>
+            <a href="web_reader/index.html" class="demo-link-btn" data-i18n="btn_demo_reader">📱 Open Live Demo Web Reader (12 Ch) &rarr;</a>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div>
+            <h3 data-i18n="feat_fal_title">⚡ Fal.ai (Flux.1) & MCP Image Engine</h3>
+            <p data-i18n="feat_fal_sub">High-speed, high-resolution AI image generation for comic panels, storybooks, & covers:</p>
+            <ul class="feature-list">
+              <li data-i18n="feat_fal_li1">Fal.ai Flux.1 Schnell / Dev / SDXL integration via python helper</li>
+              <li data-i18n="feat_fal_li2">MCP (Model Context Protocol) server config (`mcp_config.json`)</li>
+              <li data-i18n="feat_fal_li3">Strict security: FAL_KEY loaded from environment variables</li>
+              <li data-i18n="feat_fal_li4">Native internal fallback to `generate_image` in Antigravity/Codex</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
