@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Fiction Book Reader - Digital Edition</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="reader-header">
+    <button id="menu-btn" class="icon-btn" aria-label="Buka Daftar Isi">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <div class="book-title-header" id="header-book-title">Judul Novel Fiksi</div>
+    <button id="settings-btn" class="icon-btn" aria-label="Pengaturan Tampilan">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </button>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="progress-fill"></div>
+  </div>
+
+  <!-- Table of Contents Side Drawer -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <aside id="toc-drawer" class="toc-drawer">
+    <div class="drawer-header">
+      <h2>Daftar Bab</h2>
+      <button id="close-drawer" class="icon-btn">&times;</button>
+    </div>
+    <nav class="toc-nav" id="toc-list">
+      <!-- Generated via JS -->
+    </nav>
+  </aside>
+
+  <!-- Settings Panel -->
+  <div id="settings-panel" class="settings-panel hidden">
+    <h3>Pengaturan Membaca</h3>
+    <div class="setting-row">
+      <span>Tema</span>
+      <div class="theme-buttons">
+        <button class="theme-btn active" data-theme-val="dark">Gelap</button>
+        <button class="theme-btn" data-theme-val="sepia">Sepia</button>
+        <button class="theme-btn" data-theme-val="light">Terang</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span>Ukuran Teks</span>
+      <div class="font-size-controls">
+        <button id="font-dec" class="font-btn">A-</button>
+        <span id="font-size-label">18px</span>
+        <button id="font-inc" class="font-btn">A+</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span>Jenis Font</span>
+      <select id="font-family-select" class="font-select">
+        <option value="'Lora', serif">Lora (Serif Novel)</option>
+        <option value="'Plus Jakarta Sans', sans-serif">Jakarta Sans (Modern)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="reader-container">
+    <article id="manuscript-viewport" class="manuscript-viewport">
+      <!-- Chapter Content Rendered Here -->
+      <section class="chapter-content">
+        <h1 class="chapter-title">Bab 1: Bisikan di Tengah Malam</h1>
+        <p class="chapter-opener-p">Darahnya terasa membeku. Keringat dingin membasahi tengkuknya saat derap langkah berat itu berhenti tepat di balik pintu kayu ek tua yang melapuk.</p>
+        <p>Lampu gantung tembaga bergetar pelan, memantulkan bayangan samar di atas permukaan lantai batu dingin. Selama sepuluh tahun memimpin Akademi Arcanum, <span class="character-mention" data-char="Eldrin">Eldrin</span> tidak pernah merasakan desakan firasat buruk sedahsyat malam ini.</p>
+        <div class="scene-break">* * *</div>
+        <p>Hujan deras mengguyur atap menara. Di balik kegelapan malam, sebuah rahasia yang terpendam rapat mulai menampakkan dirinya kembali.</p>
+      </section>
+    </article>
+
+    <!-- Navigation Footer -->
+    <footer class="reader-footer">
+      <button id="prev-chapter-btn" class="nav-btn">&larr; Bab Sebelumnya</button>
+      <span id="chapter-indicator" class="chapter-indicator">Bab 1 dari 12</span>
+      <button id="next-chapter-btn" class="nav-btn">Bab Selanjutnya &rarr;</button>
+    </footer>
+  </main>
+
+  <!-- Character Popup Codex Modal -->
+  <div id="character-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal" class="icon-btn modal-close">&times;</button>
+      <div id="modal-char-body">
+        <h3 id="char-name">Nama Tokoh</h3>
+        <p id="char-role" class="char-role">Peran Tokoh</p>
+        <p id="char-desc">Deskripsi singkat latar belakang tokoh dan perannya dalam cerita...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
