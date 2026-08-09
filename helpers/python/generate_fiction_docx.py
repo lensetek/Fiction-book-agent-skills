@@ -8,7 +8,7 @@ Supports:
 - Binding Gutter & Mirrored Margins (Recto / Verso Odd/Even page layout)
 - Chapter Opener Rules (Odd-page start, 120pt Space Before title, No-indent first paragraph)
 - Native Word TOC Field Codes (TOC \\o "1-3" \\h \\z \\u)
-- Typography: Garamond / Georgia / Book Antiqua, 1.15 line spacing, 0.7cm first line indent
+- Accessibility Features: Optional Braille Twin-Vision (--include-braille) & Audio QR Bridge (--include-audio-qr)
 """
 
 import sys
@@ -65,6 +65,15 @@ LAYOUT_PRESETS = {
     }
 }
 
+LATIN_TO_BRAILLE = {
+    'a': '⠁', 'b': '⠃', 'c': '⠉', 'd': '⠙', 'e': '⠑', 'f': '⠋', 'g': '⠛', 'h': '⠯',
+    'i': '⠊', 'j': '⠚', 'k': '⠅', 'l': '⠇', 'm': '⠍', 'n': '⠝', 'o': '⠕', 'p': '⠏',
+    'q': '⠟', 'r': '⠌', 's': '⠎', 't': '⠞', 'u': '⠥', 'v': '⠧', 'w': '⠺', 'x': '⠭',
+    'y': '⠽', 'z': '⠵', ' ': ' ', ',': '⠂', '.': '⠲', '!': '⠔', '?': '⠦'
+}
+
+def to_braille(text):
+    return "".join(LATIN_TO_BRAILLE.get(c.lower(), c) for c in text)
 
 def add_toc_field(paragraph):
     """Inserts native Word XML TOC field into paragraph."""
@@ -92,7 +101,7 @@ def setup_document_styles(doc, preset_config):
     p_format.line_spacing = preset_config['line_spacing']
     p_format.space_before = Pt(0)
     p_format.space_after = Pt(0)
-    p_format.first_line_indent = Cm(0.7) # Standard novel paragraph indent
+    p_format.first_line_indent = Cm(0.7)
 
 
 def set_section_margins(section, preset_config):
@@ -106,7 +115,7 @@ def set_section_margins(section, preset_config):
     section.different_first_page_header_footer = True
 
 
-def build_fiction_docx(markdown_path, output_path, preset="novel_13x19", title="Novel", author="Author"):
+def build_fiction_docx(markdown_path, output_path, preset="novel_13x19", title="Novel", author="Author", include_braille=False, include_audio_qr=False):
     """Converts structured markdown manuscript into publisher-grade DOCX."""
     if preset not in LAYOUT_PRESETS:
         preset = "novel_13x19"
@@ -171,12 +180,24 @@ def build_fiction_docx(markdown_path, output_path, preset="novel_13x19", title="
                 
                 ch_p = doc.add_paragraph()
                 ch_p.paragraph_format.space_before = Pt(100)
-                ch_p.paragraph_format.space_after = Pt(36)
+                ch_p.paragraph_format.space_after = Pt(24)
                 ch_p.paragraph_format.first_line_indent = Cm(0)
                 ch_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
                 run = ch_p.add_run(text[2:])
                 run.font.size = Pt(20)
                 run.bold = True
+
+                if include_audio_qr:
+                    qr_p = doc.add_paragraph()
+                    qr_p.paragraph_format.space_before = Pt(6)
+                    qr_p.paragraph_format.space_after = Pt(24)
+                    qr_p.paragraph_format.first_line_indent = Cm(0)
+                    qr_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    qr_run = qr_p.add_run("[ ⠶ AUDIO-TACTILE QR BRIDGE: Pindai untuk Mendengar Audio Narasi Bab Ini ⠶ ]")
+                    qr_run.font.size = Pt(9)
+                    qr_run.font.color.rgb = RGBColor(0x4F, 0x46, 0xE5)
+                    qr_run.italic = True
+
                 is_first_paragraph_in_chapter = True
 
             elif text.startswith("## "):
@@ -206,7 +227,7 @@ def build_fiction_docx(markdown_path, output_path, preset="novel_13x19", title="
                 # Regular Narrative Paragraph
                 p = doc.add_paragraph()
                 if is_first_paragraph_in_chapter:
-                    p.paragraph_format.first_line_indent = Cm(0) # No indent after heading
+                    p.paragraph_format.first_line_indent = Cm(0)
                     is_first_paragraph_in_chapter = False
                 else:
                     p.paragraph_format.first_line_indent = Cm(0.7)
@@ -214,10 +235,18 @@ def build_fiction_docx(markdown_path, output_path, preset="novel_13x19", title="
                 p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
                 p.add_run(text)
 
+                if include_braille:
+                    b_p = doc.add_paragraph()
+                    b_p.paragraph_format.first_line_indent = Cm(0)
+                    b_p.paragraph_format.space_after = Pt(6)
+                    b_run = b_p.add_run(f"⠎⠞ [Braille]: {to_braille(text)}")
+                    b_run.font.size = Pt(9)
+                    b_run.font.color.rgb = RGBColor(0x64, 0x74, 0x8B)
+
     # Save Output Document
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     doc.save(output_path)
-    print(f"[SUCCESS] Fiction DOCX generated: {output_path} (Preset: {preset})")
+    print(f"[SUCCESS] Fiction DOCX generated: {output_path} (Preset: {preset} | Braille: {include_braille} | Audio-QR: {include_audio_qr})")
 
 
 if __name__ == "__main__":
@@ -227,6 +256,8 @@ if __name__ == "__main__":
     parser.add_argument("--preset", default="novel_13x19", choices=["novel_13x19", "A5", "A4"], help="Page preset")
     parser.add_argument("--title", default="Judul Novel", help="Book Title")
     parser.add_argument("--author", default="Penulis", help="Author Name")
+    parser.add_argument("--include-braille", action="store_true", help="Include Unicode Braille Twin-Vision text")
+    parser.add_argument("--include-audio-qr", action="store_true", help="Include Audio-Tactile QR Code indicators")
 
     args = parser.parse_args()
-    build_fiction_docx(args.input, args.output, args.preset, args.title, args.author)
+    build_fiction_docx(args.input, args.output, args.preset, args.title, args.author, args.include_braille, args.include_audio_qr)

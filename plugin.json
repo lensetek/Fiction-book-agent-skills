@@ -1,7 +1,7 @@
 {
   "name": "fiction-book-agent-skills",
-  "version": "1.2.0",
-  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, comics/webtoon scripting, storybooks, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, and publisher-grade print/digital layout export.",
+  "version": "1.3.0",
+  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, comics/webtoon scripting, storybooks, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, and publisher-grade print/digital layout export.",
   "author": "Fiction Book Agent Skills Contributors",
   "license": "MIT",
   "homepage": "https://github.com/lensetek/Fiction-book-agent-skills",
@@ -21,7 +21,8 @@
     "prose-polishing",
     "beta-reader-simulation",
     "market-research",
-    "booktok-trends",
+    "braille-accessibility",
+    "twin-vision-braille",
     "epub-exporter",
     "docx-print-layout",
     "agent-skills",
@@ -41,6 +42,7 @@
     "fiction-layout-exporter",
     "comic-webtoon-scriptwriter",
     "children-story-creator",
-    "fiction-market-trend-analyst"
+    "fiction-market-trend-analyst",
+    "braille-accessibility-formatter"
   ]
 }

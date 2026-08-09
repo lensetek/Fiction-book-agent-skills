@@ -11,7 +11,7 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 14 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, and **children's storybooks**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, continuity checking, and publisher-grade print/digital layout export.
+**Fiction Book Agent Skills** is a specialized collection of 15 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, and publisher-grade print/digital layout export.
 
 ### Installation
 
@@ -31,7 +31,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Agent Taxonomy (14 Specialist Skills)
+### Agent Taxonomy (15 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -45,6 +45,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `novel-scene-writer` | Drafts rich narrative chapter prose. | "Show, Don't Tell" prose, 5-sensory palette, natural dialogue. | `chapters/chapter_01.md` |
 | `comic-webtoon-scriptwriter` | Writes comic & vertical webtoon panel scripts. | Panel breakdown, camera angles, speech balloons, SFX, AI image prompts. | `comic_script.md` |
 | `children-story-creator` | Authors children's picture books & fables. | Rhyming prose, age-appropriate vocabulary, page spreads, illustration briefs. | `children_storybook.md` |
+| `braille-accessibility-formatter` | Formats books for blind & visually impaired readers. | Twin-Vision Braille Interlined (`⠁⠃⠉`), Audio-Tactile QR Bridges, Braille Embosser export, & EPUB3 accessibility. | `accessibility_plan.md` |
 | `plot-hole-continuity-checker` | Audits narrative continuity & plot holes. | Timeline consistency, worldbuilding rule enforcement, character behavior integrity. | `continuity_report.md` |
 | `prose-dialogue-polisher` | Polishes prose rhythm & dialogue subtext. | Trims purple prose, aligns character voice, refines dialogue tags. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Simulates target demographic beta feedback. | Evaluates pacing, first-chapter hook, emotional payoff per reader persona. | `beta_reader_feedback.md` |
@@ -52,20 +53,10 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Fal.ai (Flux.1) & MCP Image Generation Integration
-
-For comic panels, picture book spreads, and novel covers, the suite supports automatic image generation via **Fal.ai (Flux.1 Schnell / Dev / SDXL)** and **MCP (Model Context Protocol)**:
-- **CLI Image Generation**: Run `python helpers/python/fal_image_generator.py --prompt "..." --output "build/cover.png"` (Requires `FAL_KEY` in environment variables or `.env`).
-- **MCP Server Protocol**: Configured via `mcp_config.json` for external agent clients (Claude Code, Cursor, Windsurf).
-- **Environment Native**: Uses internal `generate_image` tool when running inside Antigravity/Codex.
-- **Strict Security**: API Keys are loaded securely from environment variables and never exposed in client-side code.
-
----
-
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 14 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, dan **buku cerita anak**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, audit kontinuitas garis waktu, hingga ekspor tata letak **buku cetak fisik** maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 15 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, hingga ekspor tata letak **buku cetak fisik** maupun **e-book digital**.
 
 ### Panduan Instalasi
 
@@ -85,7 +76,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Daftar Agen & Spesialisasi (14 Skills)
+### Daftar Agen & Spesialisasi (15 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -99,24 +90,11 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `novel-scene-writer` | Menulis draf prosa adegan. | Penulisan adegan *"Show, Don't Tell"*, detail sensori (5 indra), dialog alami. | `chapters/chapter_01.md` |
 | `comic-webtoon-scriptwriter` | Menulis skrip komik & webtoon vertikal. | Pemecahan panel, sudut kamera, dialog balon, SFX, prompt AI gambar. | `comic_script.md` |
 | `children-story-creator` | Menulis buku cerita anak & fabel. | Teks cerita berima per halaman, *brief* ilustrasi, kalibrasi kelompok usia. | `children_storybook.md` |
+| `braille-accessibility-formatter` | Format buku cetak & digital ramah tunanetra. | Twin-Vision Braille Interlined (`⠁⠃⠉`), Audio-Tactile QR Bridges, ekspor Braille Embosser, & EPUB3 accessible. | `accessibility_plan.md` |
 | `plot-hole-continuity-checker` | Audit kontinuitas & lubang plot. | Memeriksa garis waktu (*timeline*), aturan dunia, & *character behavior integrity*. | `continuity_report.md` |
 | `prose-dialogue-polisher` | Menyunting gaya prosa & dialog. | Memangkas *purple prose*, menyelaraskan *character voice*, menghaluskan dialog. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Mensimulasikan umpan balik pembaca target. | Evaluasi *pacing*, daya pikat (*hook*), & *emotional payoff* per persona pembaca. | `beta_reader_feedback.md` |
 | `fiction-layout-exporter` | Penata letak **Buku Cetak** & **Digital**. | Ekspor `.docx` siap cetak (Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
-
----
-
-### Features for Physical Printing & Digital Publishing
-
-- **Novel Print Layout Engine (`helpers/python/generate_fiction_docx.py`)**:
-  - Pre-formatted for standard Indonesian & international print sizes (**Novel 13x19 cm**, **A5**, **A4**).
-  - Binding Gutter Margins, Mirrored Recto/Verso Odd/Even page layouts, Odd-page Chapter Opener rules, and dynamic Word TOC Field Codes.
-- **Comic Visual Prompt Generator (`helpers/python/generate_comic_prompts.py`)**:
-  - Automatically converts comic panel descriptions into structured AI image generation prompts.
-- **Children's Picture Book Formatter (`helpers/python/format_children_storybook.py`)**:
-  - Generates A4 Landscape picture book DOCX spreads with child-friendly typography.
-- **Mobile-First Interactive Web Reader (`web_reader/index.html`)**:
-  - Interactive digital e-book reader with Dark/Sepia/Light themes and Character Codex pop-ups.
 
 ---
 
