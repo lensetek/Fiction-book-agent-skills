@@ -1,0 +1,17 @@
+# Environment Variables & API Keys
+.env
+.env.local
+*.key
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+build/
+dist/
+
+# Scratch & Temporary Output Files
+scratch/
+temp/
+*.log

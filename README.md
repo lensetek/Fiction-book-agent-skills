@@ -52,6 +52,16 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
+### Fal.ai (Flux.1) & MCP Image Generation Integration
+
+For comic panels, picture book spreads, and novel covers, the suite supports automatic image generation via **Fal.ai (Flux.1 Schnell / Dev / SDXL)** and **MCP (Model Context Protocol)**:
+- **CLI Image Generation**: Run `python helpers/python/fal_image_generator.py --prompt "..." --output "build/cover.png"` (Requires `FAL_KEY` in environment variables or `.env`).
+- **MCP Server Protocol**: Configured via `mcp_config.json` for external agent clients (Claude Code, Cursor, Windsurf).
+- **Environment Native**: Uses internal `generate_image` tool when running inside Antigravity/Codex.
+- **Strict Security**: API Keys are loaded securely from environment variables and never exposed in client-side code.
+
+---
+
 ## Bahasa Indonesia
 
 ### Ringkasan

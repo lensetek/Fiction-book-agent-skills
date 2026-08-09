@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "fal-ai-image-generator": {
+      "command": "python",
+      "args": [
+        "helpers/python/fal_image_generator.py"
+      ],
+      "env": {
+        "FAL_KEY": "${FAL_KEY}"
+      },
+      "description": "Fal.ai (Flux.1 / SDXL) Image Generation Tool for Comic Panels, Storybook Illustrations, and Novel Covers."
+    }
+  }
+}
