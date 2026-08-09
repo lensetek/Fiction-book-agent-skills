@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiction Book Agent Skills - AI Suite for Authors & Creative Writers</title>
+  <meta name="description" content="Collection of 14 specialized AI agent skills for fiction writing, novel authoring, comic/webtoon scripting, storybooks, worldbuilding, and print/digital publishing layout export.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #ffffff;
+      --bg-alt: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --accent: #4f46e5;
+      --accent-hover: #4338ca;
+      --accent-light: #eeefff;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 20px -2px rgba(79, 70, 229, 0.08);
+      --shadow-lg: 0 10px 30px -4px rgba(15, 23, 42, 0.1);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header Nav */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      font-size: 20px;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text-main);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .btn-github:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 24px 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: var(--text-main);
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+
+    /* Install CTA Box */
+    .cta-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 780px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-header {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .cmd-box {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: monospace;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .cmd-text {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .alt-cta {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      text-align: left;
+    }
+
+    .alt-cta-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .prompt-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Skills Grid Section */
+    .section-skills {
+      padding: 80px 24px;
+      background: var(--bg-alt);
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 17px;
+      margin-top: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.2s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .skill-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .skill-name {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .skill-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Print & Digital Features */
+    .section-features {
+      padding: 80px 24px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-box h3 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-box p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-list li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .demo-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.2s;
+    }
+
+    .demo-link-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">F</div>
+        <span class="brand-name">Fiction Book Agent Skills</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#installation">Instalasi</a></li>
+        <li><a href="#skills">14 Specialist Skills</a></li>
+        <li><a href="#publishing">Layout Cetak & Web</a></li>
+        <li><a href="web_reader/index.html">Live Demo Reader</a></li>
+      </ul>
+      <a href="https://github.com/lensetek/Fiction-book-agent-skills" target="_blank" class="btn-github">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub Repo
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="badge">🚀 14 Specialist AI Skills for Creative Writers</div>
+    <h1>Tulis Novel, Komik & Buku Cerita <span>Cepat, Konsisten & Siap Terbit</span></h1>
+    <p>Ekosistem AI Agent Skills modular untuk perancangan dunia, psikologi karakter, arsitektur plot 3-Act, penulisan adegan "Show, Don't Tell", riset pasar live internet, hingga ekspor buku cetak fisik & digital e-book.</p>
+
+    <!-- Installation Box -->
+    <div id="installation" class="cta-card">
+      <div class="cta-header">⚡ Cara Instalasi Utama (CLI)</div>
+      <div class="cmd-box">
+        <span class="cmd-text" id="cmd-install">npx skills add https://github.com/lensetek/Fiction-book-agent-skills</span>
+        <button class="copy-btn" onclick="copyText('cmd-install', this)">Salin CLI</button>
+      </div>
+
+      <div class="alt-cta">
+        <div class="alt-cta-title">💡 Cara Alternatif (Salin Tautan Prompt AI):</div>
+        <div class="prompt-box">
+          <span id="prompt-url">https://github.com/lensetek/Fiction-book-agent-skills</span>
+          <button class="copy-btn" onclick="copyText('prompt-url', this)">Salin URL Prompt</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Grid Section -->
+  <section id="skills" class="section-skills">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>14 Agen Spesialis Fiksi</h2>
+        <p>Bekerja mandiri atau dipandu oleh <strong>`fiction-book-orchestrator`</strong> dari ide awal hingga terbit</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🔮</div>
+          <div class="skill-name">fiction-book-orchestrator</div>
+          <div class="skill-desc">Koordinator alur kerja penulisan fiksi dari intake ide hingga siap cetak/terbit.</div>
+          <span class="skill-tag">Orchestrator</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">fiction-market-trend-analyst</div>
+          <div class="skill-desc">Riset tren fiksi live di internet (BookTok, Webtoon, KDP), formulasi judul & kata kunci pencarian.</div>
+          <span class="skill-tag">Live Market Research</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🏰</div>
+          <div class="skill-name">worldbuilding-architect</div>
+          <div class="skill-desc">Merancang aturan sihir/teknologi, geografi, faksi, dan atmosfer Lore Codex.</div>
+          <span class="skill-tag">Worldbuilding</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <div class="skill-name">character-designer-psychologist</div>
+          <div class="skill-desc">Menyusun profil psikologis tokoh, Want vs Need, fatal flaw, dan character arc.</div>
+          <span class="skill-tag">Character Psychology</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📐</div>
+          <div class="skill-name">plot-narrative-architect</div>
+          <div class="skill-desc">Struktur plot Save the Cat, 3-Act Structure, Hero's Journey, & foreshadowing map.</div>
+          <span class="skill-tag">Plot Architecture</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <div class="skill-name">comic-webtoon-scriptwriter</div>
+          <div class="skill-desc">Skrip panel komik & webtoon vertikal, sudut kamera, SFX, & prompt AI gambar.</div>
+          <span class="skill-tag">Comic & Webtoon</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🐥</div>
+          <div class="skill-name">children-story-creator</div>
+          <div class="skill-desc">Penulisan buku cerita anak, fabel berima, kalibrasi kelompok usia, & brief ilustrasi.</div>
+          <span class="skill-tag">Children's Books</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">✍️</div>
+          <div class="skill-name">novel-scene-writer</div>
+          <div class="skill-desc">Draf prosa adegan dengan teknik "Show, Don't Tell", detail 5 sensori, & dialog alami.</div>
+          <span class="skill-tag">Prose Drafting</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔍</div>
+          <div class="skill-name">plot-hole-continuity-checker</div>
+          <div class="skill-desc">Audit garis waktu kronologis, konsistensi aturan dunia, & karakter out-of-character.</div>
+          <span class="skill-tag">Continuity Audit</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">✨</div>
+          <div class="skill-name">prose-dialogue-polisher</div>
+          <div class="skill-desc">Menghaluskan gaya prosa, memangkas purple prose klise, & menyelaraskan dialog tags.</div>
+          <span class="skill-tag">Polishing</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">👀</div>
+          <div class="skill-name">beta-reader-critique-simulator</div>
+          <div class="skill-desc">Mensimulasikan umpan balik persona pembaca target terhadap pacing & emotional hook.</div>
+          <span class="skill-tag">Beta Reader</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📖</div>
+          <div class="skill-name">fiction-layout-exporter</div>
+          <div class="skill-desc">Penataan letak Buku Cetak DOCX (Novel 13x19 cm & A5) + Mobile Web Reader.</div>
+          <span class="skill-tag">Publisher Export</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publishing Features Section -->
+  <section id="publishing" class="section-features">
+    <div class="section-container">
+      <div class="section-header">
+        <h2>Dukungan Terbit Cetak Fisik & Digital</h2>
+        <p>Naskah otomatis tertata sesuai standar penerbitan nasional & internasional</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>📘 Format Buku Cetak Physical Print</h3>
+          <p>Penataan letak otomatis Microsoft Word (.docx) siap kirim ke penerbit cetak:</p>
+          <ul class="feature-list">
+            <li>Preset Ukuran Cetak: Novel 13x19 cm, A5 (14.8x21 cm), A4</li>
+            <li>Marjin Jilid (Gutter Margin) 2.2 cm untuk lekukan jilid lem panas</li>
+            <li>Halaman Ganjil/Genap Berhadapan (Recto/Verso Odd-Even Page Header)</li>
+            <li>Awalan Bab Baru (Chapter Opener) selalu di halaman ganjil (kanan)</li>
+            <li>Daftar Isi Dinamis berbasis Word XML Field Codes</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h3>📱 Format Digital Web Reader & EPUB</h3>
+          <p>Tampilan e-book digital modern responsive mobile-first:</p>
+          <ul class="feature-list">
+            <li>Tema Gelap (Dark Mode), Sepia, & Terang (Light Mode)</li>
+            <li>Interactive Character Codex Pop-up saat nama tokoh di-klik</li>
+            <li>Daftar bab side-drawer navigation & progress bar membaca</li>
+            <li>Dukungan ekspor EPUB terstruktur untuk Amazon Kindle / Google Books</li>
+          </ul>
+          <a href="web_reader/index.html" class="demo-link-btn">📱 Buka Live Demo Web Reader &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Fiction Book Agent Skills. Open Source under MIT License.</p>
+    <p style="margin-top: 8px;"><a href="https://github.com/lensetek/Fiction-book-agent-skills" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub Repository: lensetek/Fiction-book-agent-skills</a></p>
+  </footer>
+
+  <script>
+    function copyText(elementId, btnElement) {
+      const textToCopy = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = btnElement.innerText;
+        btnElement.innerText = "Tersalin! ✓";
+        btnElement.style.background = "#10b981";
+        setTimeout(() => {
+          btnElement.innerText = originalText;
+          btnElement.style.background = "";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
