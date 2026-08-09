@@ -154,10 +154,17 @@
 
     /* Hero Section */
     .hero {
-      padding: 80px 24px 60px;
+      position: relative;
+      padding: 90px 24px 70px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(248, 250, 252, 0.94) 100%), url('assets/hero_bg.png') center/cover no-repeat;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
       max-width: 1000px;
       margin: 0 auto;
-      text-align: center;
     }
 
     .badge {
@@ -502,23 +509,25 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="badge" data-i18n="hero_badge">🚀 14 Specialist AI Skills for Creative Writers</div>
-    <h1 data-i18n="hero_title">Craft Novels, Webtoons & Storybooks <span>Faster, Consistent & Publication-Ready</span></h1>
-    <p data-i18n="hero_subtitle">A modular AI Agent Skills suite for worldbuilding, character psychology, 3-act plot architecture, "Show, Don't Tell" prose, real-time web market research, and physical print/digital e-book layout export.</p>
+    <div class="hero-inner">
+      <div class="badge" data-i18n="hero_badge">🚀 14 Specialist AI Skills for Creative Writers</div>
+      <h1 data-i18n="hero_title">Craft Novels, Webtoons & Storybooks <span>Faster, Consistent & Publication-Ready</span></h1>
+      <p data-i18n="hero_subtitle">A modular AI Agent Skills suite for worldbuilding, character psychology, 3-act plot architecture, "Show, Don't Tell" prose, real-time web market research, and physical print/digital e-book layout export.</p>
 
-    <!-- Installation Box -->
-    <div id="installation" class="cta-card">
-      <div class="cta-header" data-i18n="cta_cli_header">⚡ Primary Installation (CLI)</div>
-      <div class="cmd-box">
-        <span class="cmd-text" id="cmd-install">npx skills add https://github.com/lensetek/Fiction-book-agent-skills</span>
-        <button class="copy-btn" onclick="copyText('cmd-install', this)" data-i18n="btn_copy_cli">Copy CLI Command</button>
-      </div>
+      <!-- Installation Box -->
+      <div id="installation" class="cta-card">
+        <div class="cta-header" data-i18n="cta_cli_header">⚡ Primary Installation (CLI)</div>
+        <div class="cmd-box">
+          <span class="cmd-text" id="cmd-install">npx skills add https://github.com/lensetek/Fiction-book-agent-skills</span>
+          <button class="copy-btn" onclick="copyText('cmd-install', this)" data-i18n="btn_copy_cli">Copy CLI Command</button>
+        </div>
 
-      <div class="alt-cta">
-        <div class="alt-cta-title" data-i18n="cta_prompt_header">💡 Alternative Installation (Copy AI Prompt URL):</div>
-        <div class="prompt-box">
-          <span id="prompt-url">https://github.com/lensetek/Fiction-book-agent-skills</span>
-          <button class="copy-btn" onclick="copyText('prompt-url', this)" data-i18n="btn_copy_url">Copy Prompt URL</button>
+        <div class="alt-cta">
+          <div class="alt-cta-title" data-i18n="cta_prompt_header">💡 Alternative Installation (Copy AI Prompt URL):</div>
+          <div class="prompt-box">
+            <span id="prompt-url">https://github.com/lensetek/Fiction-book-agent-skills</span>
+            <button class="copy-btn" onclick="copyText('prompt-url', this)" data-i18n="btn_copy_url">Copy Prompt URL</button>
+          </div>
         </div>
       </div>
     </div>
