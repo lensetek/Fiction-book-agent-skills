@@ -30,6 +30,34 @@ except ImportError:
 
 # Preset Page Specifications (in Centimeters)
 LAYOUT_PRESETS = {
+    "asadel-id": {
+        "name": "PT. Asadel Liamsindo Teknologi (National Default)",
+        "width": 15.5,
+        "height": 23.0,
+        "margin_top": 2.5,
+        "margin_bottom": 2.5,
+        "margin_inside": 2.5,
+        "margin_outside": 2.0,
+        "font_name": "Georgia",
+        "font_size": 10.5,
+        "line_spacing": 1.3,
+        "primary_color": (0x00, 0x33, 0x66),
+        "accent_color": (0xB8, 0x86, 0x0B)
+    },
+    "asadel-intl": {
+        "name": "Asadel Publisher (International Default)",
+        "width": 15.6,
+        "height": 23.4,
+        "margin_top": 2.5,
+        "margin_bottom": 2.5,
+        "margin_inside": 2.5,
+        "margin_outside": 2.0,
+        "font_name": "Palatino Linotype",
+        "font_size": 10.5,
+        "line_spacing": 1.3,
+        "primary_color": (0x0F, 0x1E, 0x36),
+        "accent_color": (0xC5, 0xA0, 0x59)
+    },
     "novel_13x19": {
         "width": 13.0,
         "height": 19.0,
@@ -253,7 +281,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Publisher-Grade Fiction DOCX Generator")
     parser.add_argument("--input", required=True, help="Path to manuscript Markdown file")
     parser.add_argument("--output", required=True, help="Path to output .docx file")
-    parser.add_argument("--preset", default="novel_13x19", choices=["novel_13x19", "A5", "A4"], help="Page preset")
+    parser.add_argument("--preset", default="novel_13x19", choices=["novel_13x19", "asadel-id", "asadel-intl", "A5", "A4"], help="Page preset")
     parser.add_argument("--title", default="Judul Novel", help="Book Title")
     parser.add_argument("--author", default="Penulis", help="Author Name")
     parser.add_argument("--include-braille", action="store_true", help="Include Unicode Braille Twin-Vision text")
