@@ -11,7 +11,7 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 17 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, cover design specifications, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
+**Fiction Book Agent Skills** is a specialized collection of 18 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, **Wattpad web-novels**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, cover design specifications, Wattpad web-novel serialization, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
 
 ### Installation
 
@@ -31,7 +31,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Agent Taxonomy (17 Specialist Skills)
+### Agent Taxonomy (18 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -52,13 +52,14 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `fiction-layout-exporter` | Formats print & digital e-book exports. | Publisher-grade DOCX (Asadel ID/INTL, Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
 | `fiction-agent-update-manager` | Automated Git update & security manager. | Pre-update credential leak scanning, guarded `git pull` confirmation, & daily cron checks. | Remote repo update status & prompt alerts. |
 | `fiction-cover-designer` | Book cover, spine math, & AI prompt designer. | Front/back cover layouts, spine width calculations, typography, safe-area preflight, & AI image prompts. | Cover brief & image prompts. |
+| `wattpad-publisher-formatter` | Wattpad web-novel episode serializer & tagger. | Episode splitting (1,500-2,500 words), cliffhanger check, 25 Wattpad search tags, A/N Vote ⭐ prompts, & 2:3 cover specs. | `wattpad_build/*.md` & setup metadata. |
 
 ---
 
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 17 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 18 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, **web-novel Wattpad**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, serialisasi Wattpad & pemicu Vote ⭐/Komentar, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
 
 ### Panduan Instalasi
 
@@ -70,7 +71,7 @@ npx skills add https://github.com/lensetek/Fiction-book-agent-skills
 ```
 
 #### Cara Alternatif (Prompt URL)
-Atau salin tautan repositori ini langsung ke dalam prompt AI Assistant Anda (Google Antigravity, Claude Code, Codex, Cursor, ChatGPT):
+Or copy and paste the repository URL directly into your AI Assistant prompt (Google Antigravity, Claude Code, Codex, Cursor, ChatGPT):
 
 ```text
 https://github.com/lensetek/Fiction-book-agent-skills
@@ -78,7 +79,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Daftar Agen & Spesialisasi (17 Skills)
+### Daftar Agen & Spesialisasi (18 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -99,6 +100,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `fiction-layout-exporter` | Penata letak **Buku Cetak** & **Digital**. | Ekspor `.docx` siap cetak (Preset Asadel ID/INTL, Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
 | `fiction-agent-update-manager` | Pengelola pembaruan Git & keamanan otomatis. | Pemindaian kebocoran kredensial, notifikasi persetujuan `git pull`, & jadwal cron harian. | Status update remote repo & prompt persetujuan. |
 | `fiction-cover-designer` | Perancang sampul buku, punggung, & prompt AI. | Layout cover depan/belakang, rumus lebar punggung buku, tipografi, preflight cetak, & prompt gambar AI. | Brief cover & prompt gambar AI. |
+| `wattpad-publisher-formatter` | Penata & serialisasi web-novel Wattpad. | Pemecahan episode (1.500-2.500 kata), pemicu cliffhanger, 25 tag rekomendasi, A/N pemicu Vote ⭐, & cover 2:3. | `wattpad_build/*.md` & metadata setup. |
 
 ---
 

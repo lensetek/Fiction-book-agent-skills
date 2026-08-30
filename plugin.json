@@ -1,7 +1,7 @@
 {
   "name": "fiction-book-agent-skills",
-  "version": "1.5.0",
-  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, comics/webtoon scripting, storybooks, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, automated daily updates, and publisher-grade print/digital layout export.",
+  "version": "1.6.0",
+  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, comics/webtoon scripting, storybooks, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, Wattpad web-novel serialization, automated daily updates, and publisher-grade print/digital layout export.",
   "author": "Fiction Book Agent Skills Contributors",
   "license": "MIT",
   "homepage": "https://github.com/lensetek/Fiction-book-agent-skills",
@@ -24,6 +24,8 @@
     "braille-accessibility",
     "cover-designer",
     "asadel-publisher",
+    "wattpad",
+    "web-novel",
     "twin-vision-braille",
     "epub-exporter",
     "docx-print-layout",
@@ -48,6 +50,7 @@
     "fiction-market-trend-analyst",
     "braille-accessibility-formatter",
     "fiction-agent-update-manager",
-    "fiction-cover-designer"
+    "fiction-cover-designer",
+    "wattpad-publisher-formatter"
   ]
 }
