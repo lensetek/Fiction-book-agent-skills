@@ -106,5 +106,24 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
+## What's New in v1.7.0 (Changelog)
+
+### 🌟 English
+- **New Skill: `fiction-video-reels-director`**: Complete production scriptwriting for 9:16 vertical videos (BookTok, Instagram Reels, YouTube Shorts, & episodic micro-dramas). Includes 3-second viral hooks, Google Flow / Veo camera prompts, and dramatic Indonesian voiceover scripts.
+- **All-In-One Visual Production Bible (`visual_production_bible.md`)**: A consolidated master prompt codex providing copy-paste-ready prompts for covers, 3-angle character turnaround consistency sheets, key environments, and climax moments.
+- **Zero-Key AI Image Generator (`pollinations_image_generator.py`)**: 100% free, no-API-key image generation powered by Pollinations.ai (FLUX) with automatic high-fidelity prompt enhancement and multi-aspect ratio support (`1:1`, `2:3`, `3:4`, `9:16`, `16:9`).
+- **Publisher HTML Cover Generator (`book_cover_template.html` & `generate_book_cover.py`)**: 300 DPI print-ready cover rendering with PT. Asadel Liamsindo Teknologi & Asadel Publisher branding presets.
+- **Wattpad Publishing Engine (`wattpad-publisher-formatter`)**: Automated episode splitting (1,500-2,500 words), 25 trending hashtag tags, cliffhanger checks, and Vote ⭐ / Comment Author Notes.
+- **Google Flow MCP Support**: Added `google-flow-mcp` integration in `mcp_config.json` for secure browser-based video character consistency generation.
+
+### 🌟 Bahasa Indonesia
+- **Skill Baru: `fiction-video-reels-director`**: Penulisan naskah video vertikal 9:16 untuk BookTok, Instagram Reels, dan adaptasi micro-drama berseri (format ReelShort/DramaBox).
+- **Kit Visual Terpadu (`visual_production_bible.md`)**: Berkas panduan prompt visual all-in-one untuk sampul novel, lembar konsistensi karakter (3 sudut pandang), latar dunia fiksi, dan adegan klimaks.
+- **Generator Gambar Gratis Tanpa Kunci (`pollinations_image_generator.py`)**: Panggilan HTTP langsung tanpa API key menggunakan model FLUX dari Pollinations.ai dengan fitur otomatis Prompt Enhancer.
+- **Render Sampul Cetak HTML 300 DPI**: Template interaktif siap cetak dengan preset penerbit *PT. Asadel Liamsindo Teknologi* dan *Asadel Publisher*.
+- **Mesin Penerbitan Wattpad (`wattpad-publisher-formatter`)**: Pemecahan bab otomatis (1.500–2.500 kata), pemicu Vote ⭐/Komentar, dan 25 tag rekomendasi algoritma.
+
+---
+
 ## License
 [MIT License](LICENSE)
