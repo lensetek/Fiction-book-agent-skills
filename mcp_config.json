@@ -9,6 +9,13 @@
         "FAL_KEY": "${FAL_KEY}"
       },
       "description": "Fal.ai (Flux.1 / SDXL) Image Generation Tool for Comic Panels, Storybook Illustrations, and Novel Covers."
+    },
+    "google-flow-mcp": {
+      "command": "node",
+      "args": [
+        "path/to/flow-mcp/build/index.js"
+      ],
+      "description": "Google Flow (labs.google/fx/tools/flow) MCP automation for consistent character video generation, Veo scenes, and Reels assembly using local browser session."
     }
   }
 }

@@ -72,14 +72,47 @@ $$\text{Spine Width} = \left(\frac{240}{2}\right) \times 0.09\text{ mm} + 1.5\te
 
 ---
 
-## Fitur Integrasi Generator Gambar (FAL.ai)
+## All-In-One Visual Production Bible (`visual_production_bible.md`)
 
-Jalankan skrip pembantu Python untuk langsung menghasilkan gambar draf cover fiksi via FAL.ai:
+Agen ini secara otomatis dapat menghasilkan satu dokumen panduan visual komprehensif dalam 1 file tunggal (`visual_production_bible.md`) menggunakan templat `templates/visual_production_bible_template.md`. 
+File ini berisi:
+- **Master Cover Art Prompts** (Rasio 2:3 dan 3:4).
+- **Character Turnaround & Consistency Sheets** (Prompt 3 sudut pandang tokoh untuk menjaga wajah/pakaian konsisten).
+- **Worldbuilding Key Environments** (Prompt latar lokasi penting cerita 16:9 dan 9:16).
+- **Key Climax Moments** (Prompt adegan puncak cerita).
+- **Wattpad & Video Reels Promo Assets** (Prompt aset vertikal 9:16 dan 2:3).
+
+---
+
+## Generator Gambar AI (Zero-Key Pollinations & Fal.ai)
+
+### 1. Zero-Key Default (Pollinations.ai / FLUX - Gratis & Tanpa API Key)
+Jalankan skrip pembantu Python untuk mengunduh gambar beresolusi tinggi langsung dengan Prompt Enhancer otomatis:
+```bash
+python helpers/python/pollinations_image_generator.py \
+  --prompt "brave female knight with braided silver hair holding glowing sword, ruined cathedral under storm sky" \
+  --output assets/cover_front.png \
+  --aspect-ratio "2:3" \
+  --style "fantasy"
+```
+
+### 2. Opsi Berbayar / Pro (FAL.ai)
 ```bash
 python helpers/python/fal_image_generator.py \
   --prompt "cinematic novel cover art, epic fantasy castle under glowing moonlight, dark blue and amber gold tones, highly detailed, 8k" \
   --output assets/novel_cover_draft.png \
   --aspect-ratio "3:4"
+```
+
+### 3. Render Sampul Cetak 300 DPI dari Template HTML
+Sematkan gambar hasil AI ke dalam template sampul cetak Asadel Publisher / General:
+```bash
+python helpers/python/generate_book_cover.py \
+  --preset asadel-id \
+  --title "Judul Cerita Anda" \
+  --author "Nama Penulis" \
+  --illustration assets/cover_front.png \
+  --output build/cover_print_ready.html
 ```
 
 ---
