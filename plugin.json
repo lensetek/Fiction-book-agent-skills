@@ -1,7 +1,7 @@
 {
   "name": "fiction-book-agent-skills",
-  "version": "1.7.0",
-  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, comics/webtoon scripting, storybooks, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, Wattpad web-novel serialization, short video reels & micro-drama directing, automated daily updates, and publisher-grade print/digital layout export.",
+  "version": "1.8.0",
+  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, manga/comic paneling, storybooks, magazine/editorial layouts, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, Wattpad serialization, vertical micro-dramas (TikTok/Reels), automated daily updates, and publisher-grade print/digital layout export.",
   "author": "Fiction Book Agent Skills Contributors",
   "license": "MIT",
   "homepage": "https://github.com/lensetek/Fiction-book-agent-skills",
@@ -27,6 +27,9 @@
     "wattpad",
     "web-novel",
     "video-reels",
+    "manga",
+    "magazine",
+    "periodical",
     "micro-drama",
     "booktok",
     "twin-vision-braille",
@@ -55,6 +58,9 @@
     "fiction-agent-update-manager",
     "fiction-cover-designer",
     "wattpad-publisher-formatter",
-    "fiction-video-reels-director"
+    "fiction-video-reels-director",
+    "manga-graphic-novel-artisan",
+    "microdrama-webseries-director",
+    "magazine-layout-editor"
   ]
 }

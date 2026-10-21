@@ -90,6 +90,42 @@ LAYOUT_PRESETS = {
         "font_name": "Times New Roman",
         "font_size": 12,
         "line_spacing": 1.5
+    },
+    "manga_b6": {
+        "name": "Manga Tankobon B6 (Japanese Standard)",
+        "width": 12.8,
+        "height": 18.2,
+        "margin_top": 1.8,
+        "margin_bottom": 1.8,
+        "margin_inside": 2.2,
+        "margin_outside": 1.5,
+        "font_name": "Arial",
+        "font_size": 10,
+        "line_spacing": 1.15
+    },
+    "storybook_square": {
+        "name": "Children Picture Book Square (20x20 cm)",
+        "width": 20.0,
+        "height": 20.0,
+        "margin_top": 2.0,
+        "margin_bottom": 2.0,
+        "margin_inside": 2.5,
+        "margin_outside": 2.0,
+        "font_name": "Comic Sans MS",
+        "font_size": 14,
+        "line_spacing": 1.3
+    },
+    "magazine_a4": {
+        "name": "Editorial Magazine & Zine A4 (21x29.7 cm)",
+        "width": 21.0,
+        "height": 29.7,
+        "margin_top": 2.0,
+        "margin_bottom": 2.0,
+        "margin_inside": 2.2,
+        "margin_outside": 1.8,
+        "font_name": "Georgia",
+        "font_size": 10,
+        "line_spacing": 1.15
     }
 }
 
@@ -281,7 +317,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Publisher-Grade Fiction DOCX Generator")
     parser.add_argument("--input", required=True, help="Path to manuscript Markdown file")
     parser.add_argument("--output", required=True, help="Path to output .docx file")
-    parser.add_argument("--preset", default="novel_13x19", choices=["novel_13x19", "asadel-id", "asadel-intl", "A5", "A4"], help="Page preset")
+    parser.add_argument("--preset", default="novel_13x19", choices=["novel_13x19", "asadel-id", "asadel-intl", "A5", "A4", "manga_b6", "storybook_square", "magazine_a4"], help="Page preset")
     parser.add_argument("--title", default="Judul Novel", help="Book Title")
     parser.add_argument("--author", default="Penulis", help="Author Name")
     parser.add_argument("--include-braille", action="store_true", help="Include Unicode Braille Twin-Vision text")

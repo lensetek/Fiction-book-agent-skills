@@ -11,7 +11,7 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 19 AI agent skills designed for authoring **novels**, **fiction books**, **comic/webtoon scripts**, **children's storybooks**, **Wattpad web-novels**, **short video reels / micro-dramas**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, comic scripting, storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical video reels directing (BookTok/Micro-Drama), automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
+**Fiction Book Agent Skills** is a specialized collection of 22 AI agent skills designed for authoring **novels**, **fiction books**, **manga & comic graphic novels**, **children's picture books**, **editorial magazines & zines**, **Wattpad web-novels**, **vertical micro-dramas (TikTok/Reels/ReelShort)**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, dynamic manga/comic framing (slanted cuts, frame-breaking, double-page splash), magazine editorial layouts (A4 multi-column, mastheads, pull-quotes), storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical micro-drama directing, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
 
 ### Installation
 
@@ -31,7 +31,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Agent Taxonomy (19 Specialist Skills)
+### Agent Taxonomy (22 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -49,18 +49,21 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `plot-hole-continuity-checker` | Audits narrative continuity & plot holes. | Timeline consistency, worldbuilding rule enforcement, character behavior integrity. | `continuity_report.md` |
 | `prose-dialogue-polisher` | Polishes prose rhythm & dialogue subtext. | Trims purple prose, aligns character voice, refines dialogue tags. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Simulates target demographic beta feedback. | Evaluates pacing, first-chapter hook, emotional payoff per reader persona. | `beta_reader_feedback.md` |
-| `fiction-layout-exporter` | Formats print & digital e-book exports. | Publisher-grade DOCX (Asadel ID/INTL, Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
+| `fiction-layout-exporter` | Formats print & digital e-book exports. | Publisher-grade DOCX (Asadel ID/INTL, Novel 13x19 cm, Manga B6, Square, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
 | `fiction-agent-update-manager` | Automated Git update & security manager. | Pre-update credential leak scanning, guarded `git pull` confirmation, & daily cron checks. | Remote repo update status & prompt alerts. |
 | `fiction-cover-designer` | Book cover, spine math, & AI prompt designer. | Front/back cover layouts, spine width calculations, typography, safe-area preflight, & AI image prompts. | Cover brief & image prompts. |
 | `wattpad-publisher-formatter` | Wattpad web-novel episode serializer & tagger. | Episode splitting (1,500-2,500 words), cliffhanger check, 25 Wattpad search tags, A/N Vote ⭐ prompts, & 2:3 cover specs. | `wattpad_build/*.md` & setup metadata. |
 | `fiction-video-reels-director` | Short video reels & micro-drama director. | 3-second viral hooks, 9:16 vertical scene breakdowns, Google Flow/Veo video prompts, Indonesian VO script, & dynamic captions. | `reels_production/*.md` |
+| `manga-graphic-novel-artisan` | Japanese Manga & Graphic Novel specialist. | Tankobon B6/A5 sizes, dynamic slanted cuts, frame-breaking, double-page splash, screentone B&W, & negative space for balloons. | `manga_production/*.md` |
+| `microdrama-webseries-director` | Vertical 9:16 micro-drama web series director. | 60-90s episode beats (Hook, micro-twist, extreme cliffhanger), safe UI zone, character consistency, & keyframe visual prompts. | `microdrama_production/*.md` |
+| `magazine-layout-editor` | Editorial magazine & creative zine editor. | A4/US Letter multi-column grids, masthead cover anatomy, teasers, pull-quotes, drop-caps, & high-fashion editorial photo prompts. | `magazine_production/*.md` |
 
 ---
 
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 19 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **skrip komik/webtoon**, **buku cerita anak**, **web-novel Wattpad**, **video reels / micro-drama vertikal**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara video pendek vertikal 9:16 (BookTok/Micro-Drama ala ReelShort), pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 22 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **manga & komik graphic novel**, **buku cerita anak bergambar**, **majalah editorial & zine**, **web-novel Wattpad**, **serial micro-drama vertikal (TikTok/Reels/ReelShort)**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, tata letak bingkai manga dinamis (*slanted cuts, frame-breaking, double-page splash*), tata letak majalah multi-kolom (A4/US Letter, masthead, pull-quotes), skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara micro-drama vertikal 9:16, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
 
 ### Panduan Instalasi
 
@@ -80,7 +83,7 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
-### Daftar Agen & Spesialisasi (19 Skills)
+### Daftar Agen & Spesialisasi (22 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -98,11 +101,30 @@ https://github.com/lensetek/Fiction-book-agent-skills
 | `plot-hole-continuity-checker` | Audit kontinuitas & lubang plot. | Memeriksa garis waktu (*timeline*), aturan dunia, & *character behavior integrity*. | `continuity_report.md` |
 | `prose-dialogue-polisher` | Menyunting gaya prosa & dialog. | Memangkas *purple prose*, menyelaraskan *character voice*, menghaluskan dialog. | `chapters_polished/` |
 | `beta-reader-critique-simulator` | Mensimulasikan umpan balik pembaca target. | Evaluasi *pacing*, daya pikat (*hook*), & *emotional payoff* per persona pembaca. | `beta_reader_feedback.md` |
-| `fiction-layout-exporter` | Penata letak **Buku Cetak** & **Digital**. | Ekspor `.docx` siap cetak (Preset Asadel ID/INTL, Novel 13x19 cm, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
+| `fiction-layout-exporter` | Penata letak **Buku Cetak** & **Digital**. | Ekspor `.docx` siap cetak (Preset Asadel ID/INTL, Novel 13x19 cm, Manga B6, Square, A5, A4) + Mobile Web Reader. | `build/*.docx` & `web_reader/` |
 | `fiction-agent-update-manager` | Pengelola pembaruan Git & keamanan otomatis. | Pemindaian kebocoran kredensial, notifikasi persetujuan `git pull`, & jadwal cron harian. | Status update remote repo & prompt persetujuan. |
 | `fiction-cover-designer` | Perancang sampul buku, punggung, & prompt AI. | Layout cover depan/belakang, rumus lebar punggung buku, tipografi, preflight cetak, & prompt gambar AI. | Brief cover & prompt gambar AI. |
 | `wattpad-publisher-formatter` | Penata & serialisasi web-novel Wattpad. | Pemecahan episode (1.500-2.500 kata), pemicu cliffhanger, 25 tag rekomendasi, A/N pemicu Vote ⭐, & cover 2:3. | `wattpad_build/*.md` & metadata setup. |
 | `fiction-video-reels-director` | Sutradara video reels & micro-drama vertikal. | Hook 3 detik viral, breakdown adegan vertikal 9:16, prompt video Google Flow/Veo, naskah VO Indonesia, & subtitle dinamis. | `reels_production/*.md` |
+| `manga-graphic-novel-artisan` | Spesialis Manga Jepang & Graphic Novel. | Standar Tankobon B6/A5, framing miring aksi, efek tembus panel, double-page splash, screentone B&W, & negative space balon kata. | `manga_production/*.md` |
+| `microdrama-webseries-director` | Sutradara serial micro-drama vertikal 9:16. | Struktur episode 60-90 detik (Hook, micro-twist, cliffhanger ekstrem), safe UI zone, konsistensi aktor, & keyframe visual AI. | `microdrama_production/*.md` |
+| `magazine-layout-editor` | Editor tata letak majalah & zine editorial. | Grid 2-3 kolom A4/US Letter, anatomi cover masthead, teasers, pull-quotes, drop-caps, & prompt foto editorial majalah. | `magazine_production/*.md` |
+
+---
+
+## What's New in v1.8.0 (Changelog)
+
+### 🌟 English
+- **New Skill: `manga-graphic-novel-artisan`**: Dedicated manga and graphic novel structuring with Tankobon B6 and A5 trim standards, dynamic slanted action cuts, frame-breaking character pop-outs, two-page splash spreads, screentone shading prompts, and speech balloon negative space planning.
+- **New Skill: `microdrama-webseries-director`**: Complete scriptwriting and directorial staging for ultra-short 9:16 vertical drama series (TikTok, Reels, Shorts, ReelShort, DramaBox). Engineered with 3-second hook formulas, 60–90 second episodes, micro-twists, safe UI zones (avoiding caption/button overlap), and multi-shot keyframe prompts for AI image/video generators.
+- **New Skill: `magazine-layout-editor`**: Editorial magazine and zine design system featuring 2-column and 3-column A4/US Letter grids, masthead cover anatomy with teaser sub-headlines, pull-quotes, drop-caps, photo caption styling, and editorial photography prompts.
+- **Enhanced Print Presets in Word DOCX Exporter**: `generate_fiction_docx.py` now includes native support for `manga_b6` (128x182 mm), `storybook_square` (200x200 mm), and `magazine_a4` (210x297 mm with 3-column editorial layout) presets.
+
+### 🌟 Bahasa Indonesia
+- **Skill Baru: `manga-graphic-novel-artisan`**: Penataan format Manga & Novel Grafis dengan standar ukuran cetak Tankobon B6 dan A5, pemotongan panel miring aksi (*slanted dynamic cuts*), karakter tembus batas panel (*frame-breaking pop-outs*), splash dua halaman (*spreads*), prompt screentone monokrom, dan alokasi ruang kosong (*negative space*) balon dialog.
+- **Skill Baru: `microdrama-webseries-director`**: Penulisan skrip & penyutradaraan micro-drama vertikal 9:16 untuk platform modern (TikTok, IG Reels, YouTube Shorts, ReelShort). Pacing kilat 60–90 detik per episode, formula hook visual 3 detik, safe zone UI antarmuka, konsistensi aktor, dan prompt keyframe multi-shot untuk AI visual.
+- **Skill Baru: `magazine-layout-editor`**: Tata letak majalah dan zine profesional berbasis grid 2 & 3 kolom A4/US Letter, struktur anatomi sampul dengan masthead & teaser judul, pull-quotes, huruf kapital awal (*drop-caps*), serta prompt fotografi editorial majalah.
+- **Preset Format Baru pada Ekspor DOCX**: Pembaruan generator DOCX (`generate_fiction_docx.py`) dengan preset cetak `manga_b6`, buku cerita anak `storybook_square`, dan tata letak majalah `magazine_a4`.
 
 ---
 

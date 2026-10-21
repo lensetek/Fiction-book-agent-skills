@@ -27,6 +27,9 @@ python helpers/python/generate_fiction_docx.py \
   - `novel_13x19`: Standard Novel Indonesia ($13 \times 19\text{ cm}$, Garamond 11pt).
   - `A5`: Standard A5 ($14.8 \times 21\text{ cm}$).
   - `A4`: Standard A4 Script/Storybook ($21 \times 29.7\text{ cm}$).
+  - `manga_b6`: Manga Tankobon Standar Jepang ($12.8 \times 18.2\text{ cm}$).
+  - `storybook_square`: Buku Cerita Anak Bergambar ($20 \times 20\text{ cm}$).
+  - `magazine_a4`: Majalah Editorial & Zine A4 ($21 \times 29.7\text{ cm}$).
   - Marjin Jilid (*Gutter Margin*): $2.2\text{ cm} - 2.5\text{ cm}$ marjin dalam untuk lekukan jilid buku.
   - Halaman Bab Baru (*Recto Odd-Page Break*): Bab baru selalu dimulai di halaman ganjil (halaman kanan).
   - Judul Bab (*Chapter Opener*): Diturunkan 100-120pt dari marjin atas.
