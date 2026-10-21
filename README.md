@@ -31,6 +31,55 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
+### End-to-End Workflow Architecture
+
+```mermaid
+flowchart TD
+    subgraph Intake ["Phase 1: Conception & Intelligence"]
+        A["fiction-book-orchestrator"] --> B["story-concept-intake"]
+        A --> C["fiction-market-trend-analyst"]
+    end
+
+    subgraph Architecture ["Phase 2: World, Characters & Plot"]
+        B & C --> D["worldbuilding-architect"]
+        B & C --> E["character-designer-psychologist"]
+        D & E --> F["plot-narrative-architect"]
+        F --> G["storyboard-scene-planner"]
+    end
+
+    subgraph Drafting ["Phase 3: Multi-Format Drafting Engines"]
+        G --> H1["novel-scene-writer (Prose Novels)"]
+        G --> H2["comic-webtoon-scriptwriter (Webtoons)"]
+        G --> H3["manga-graphic-novel-artisan (Manga B6/A5)"]
+        G --> H4["children-story-creator (Storybooks)"]
+        G --> H5["microdrama-webseries-director (9:16 Dramas)"]
+        G --> H6["magazine-layout-editor (A4 Magazines)"]
+    end
+
+    subgraph Visuals ["Phase 4: Visuals & Unified Prompt Bible"]
+        H1 & H2 & H3 & H4 & H5 & H6 --> I["fiction-cover-designer"]
+        I --> J["visual_production_bible.md (ChatGPT / Midjourney Prompts)"]
+        I --> K["pollinations_image_generator.py (FLUX Zero-Key)"]
+        I --> L["book_cover_template.html (300 DPI Cover)"]
+    end
+
+    subgraph Refinement ["Phase 5: Quality Audit & Polish"]
+        H1 & H2 & H3 & H4 & H5 & H6 --> M["plot-hole-continuity-checker"]
+        M --> N["prose-dialogue-polisher"]
+        N --> O["beta-reader-critique-simulator"]
+    end
+
+    subgraph Distribution ["Phase 6: Multi-Channel Publishing & Export"]
+        O --> P1["fiction-layout-exporter (DOCX: Novel, Manga, Magazine, A5)"]
+        O --> P2["wattpad-publisher-formatter (Wattpad Serialization)"]
+        O --> P3["fiction-video-reels-director (BookTok & Reels Video)"]
+        O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
+        P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
+    end
+```
+
+---
+
 ### Agent Taxonomy (22 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
@@ -83,6 +132,55 @@ https://github.com/lensetek/Fiction-book-agent-skills
 
 ---
 
+### Alur Kerja & Arsitektur End-to-End
+
+```mermaid
+flowchart TD
+    subgraph Intake ["Fase 1: Konsep & Riset Pasar"]
+        A["fiction-book-orchestrator"] --> B["story-concept-intake"]
+        A --> C["fiction-market-trend-analyst"]
+    end
+
+    subgraph Architecture ["Fase 2: Semesta, Tokoh & Plot"]
+        B & C --> D["worldbuilding-architect"]
+        B & C --> E["character-designer-psychologist"]
+        D & E --> F["plot-narrative-architect"]
+        F --> G["storyboard-scene-planner"]
+    end
+
+    subgraph Drafting ["Fase 3: Mesin Penulisan Multi-Format"]
+        G --> H1["novel-scene-writer (Novel Prosa)"]
+        G --> H2["comic-webtoon-scriptwriter (Webtoon)"]
+        G --> H3["manga-graphic-novel-artisan (Manga B6/A5)"]
+        G --> H4["children-story-creator (Buku Cerita Anak)"]
+        G --> H5["microdrama-webseries-director (Micro-Drama 9:16)"]
+        G --> H6["magazine-layout-editor (Majalah & Zine A4)"]
+    end
+
+    subgraph Visuals ["Fase 4: Kit Visual & Prompt Terpadu"]
+        H1 & H2 & H3 & H4 & H5 & H6 --> I["fiction-cover-designer"]
+        I --> J["visual_production_bible.md (Prompt ChatGPT / Midjourney)"]
+        I --> K["pollinations_image_generator.py (FLUX Zero-Key)"]
+        I --> L["book_cover_template.html (Sampul 300 DPI)"]
+    end
+
+    subgraph Refinement ["Fase 5: Audit Kualitas & Penyempurnaan"]
+        H1 & H2 & H3 & H4 & H5 & H6 --> M["plot-hole-continuity-checker"]
+        M --> N["prose-dialogue-polisher"]
+        N --> O["beta-reader-critique-simulator"]
+    end
+
+    subgraph Distribution ["Fase 6: Distribusi & Ekspor Multi-Kanal"]
+        O --> P1["fiction-layout-exporter (DOCX: Novel, Manga, Majalah, A5)"]
+        O --> P2["wattpad-publisher-formatter (Serialisasi Wattpad)"]
+        O --> P3["fiction-video-reels-director (Video BookTok & Reels)"]
+        O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
+        P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
+    end
+```
+
+---
+
 ### Daftar Agen & Spesialisasi (22 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
@@ -115,16 +213,50 @@ https://github.com/lensetek/Fiction-book-agent-skills
 ## What's New in v1.8.0 (Changelog)
 
 ### 🌟 English
-- **New Skill: `manga-graphic-novel-artisan`**: Dedicated manga and graphic novel structuring with Tankobon B6 and A5 trim standards, dynamic slanted action cuts, frame-breaking character pop-outs, two-page splash spreads, screentone shading prompts, and speech balloon negative space planning.
-- **New Skill: `microdrama-webseries-director`**: Complete scriptwriting and directorial staging for ultra-short 9:16 vertical drama series (TikTok, Reels, Shorts, ReelShort, DramaBox). Engineered with 3-second hook formulas, 60–90 second episodes, micro-twists, safe UI zones (avoiding caption/button overlap), and multi-shot keyframe prompts for AI image/video generators.
-- **New Skill: `magazine-layout-editor`**: Editorial magazine and zine design system featuring 2-column and 3-column A4/US Letter grids, masthead cover anatomy with teaser sub-headlines, pull-quotes, drop-caps, photo caption styling, and editorial photography prompts.
-- **Enhanced Print Presets in Word DOCX Exporter**: `generate_fiction_docx.py` now includes native support for `manga_b6` (128x182 mm), `storybook_square` (200x200 mm), and `magazine_a4` (210x297 mm with 3-column editorial layout) presets.
+- **New Skill: `manga-graphic-novel-artisan`**:
+  - Dedicated Japanese Manga & Graphic Novel formatting adhering to Tankobon B6 (128×182 mm) and A5 (148×210 mm) publication trim standards.
+  - Dynamic panel architecture: slanted diagonal cuts for high-action impact, frame-breaking character pop-outs (*tachi-kiri* bleed), 2-page dramatic splash spreads, and dedicated negative space planning for speech balloons and SFX lettering.
+  - Screentone B&W halftone shading prompts tailored specifically for native image-generating models (ChatGPT DALL-E 3, Gemini Antigravity, Midjourney).
+- **New Skill: `microdrama-webseries-director`**:
+  - Complete directorial scriptwriting and visual staging for ultra-short 9:16 vertical drama series (TikTok, Instagram Reels, YouTube Shorts, ReelShort, DramaBox).
+  - Engineered with 3-second instant hook formulas, rapid 60–90 second episodic pacing, micro-twists, and extreme cliffhangers.
+  - Safe UI Zone mapping (1080×1920 px viewport protection against TikTok/Reels side buttons and bottom captions) and multi-shot keyframe prompts for AI image & video engines (Google Flow, Veo, Kling).
+- **New Skill: `magazine-layout-editor`**:
+  - Editorial magazine and zine publishing system featuring 2-column and 3-column typographic grids (A4 210×297 mm & US Letter).
+  - Complete cover anatomy design: Top Masthead branding, issue dateline, lead feature headline, and teaser sub-headlines.
+  - Editorial styling elements including dramatic pull-quotes, 3-line drop-caps, photo caption sidebars, and high-fashion editorial photography prompts.
+- **Direct AI Model Prompting in All-In-One Visual Bible (`visual_production_bible.md`)**:
+  - Consolidated single-file prompt master codex enabling authors to copy and paste ready-to-run prompts directly into image-capable AI models (ChatGPT, Gemini, Midjourney).
+  - Guarantees character facial consistency across 3-angle turnaround sheets (Front, 3/4, Profile), cover art, interior scenes, and manga panel framing in a single file.
+- **Enhanced Print Presets in Word DOCX Exporter**:
+  - Native print presets added to [`helpers/python/generate_fiction_docx.py`](helpers/python/generate_fiction_docx.py):
+    - `manga_b6` (128 × 182 mm Tankobon with 1.8 cm gutter)
+    - `storybook_square` (200 × 200 mm for children's picture books)
+    - `magazine_a4` (210 × 297 mm with 3-column editorial layout)
+    - Standard presets: `asadel_id`, `asadel_intl`, `novel_13x19`, `a5`, and `a4`.
 
 ### 🌟 Bahasa Indonesia
-- **Skill Baru: `manga-graphic-novel-artisan`**: Penataan format Manga & Novel Grafis dengan standar ukuran cetak Tankobon B6 dan A5, pemotongan panel miring aksi (*slanted dynamic cuts*), karakter tembus batas panel (*frame-breaking pop-outs*), splash dua halaman (*spreads*), prompt screentone monokrom, dan alokasi ruang kosong (*negative space*) balon dialog.
-- **Skill Baru: `microdrama-webseries-director`**: Penulisan skrip & penyutradaraan micro-drama vertikal 9:16 untuk platform modern (TikTok, IG Reels, YouTube Shorts, ReelShort). Pacing kilat 60–90 detik per episode, formula hook visual 3 detik, safe zone UI antarmuka, konsistensi aktor, dan prompt keyframe multi-shot untuk AI visual.
-- **Skill Baru: `magazine-layout-editor`**: Tata letak majalah dan zine profesional berbasis grid 2 & 3 kolom A4/US Letter, struktur anatomi sampul dengan masthead & teaser judul, pull-quotes, huruf kapital awal (*drop-caps*), serta prompt fotografi editorial majalah.
-- **Preset Format Baru pada Ekspor DOCX**: Pembaruan generator DOCX (`generate_fiction_docx.py`) dengan preset cetak `manga_b6`, buku cerita anak `storybook_square`, dan tata letak majalah `magazine_a4`.
+- **Skill Baru: `manga-graphic-novel-artisan`**:
+  - Penataan format Manga Jepang & Novel Grafis dengan standar ukuran cetak fisik Tankobon B6 (128×182 mm) dan A5 (148×210 mm).
+  - Arsitektur panel aksi dinamis: pemotongan panel miring (*slanted diagonal cuts*), karakter tembus batas panel (*frame-breaking pop-outs / tachi-kiri*), splash megah dua halaman berhadapan (*spreads*), dan alokasi ruang kosong (*negative space*) untuk balon percakapan dan efek suara (SFX).
+  - Format prompt visual dengan teknik screentone monokrom B&W yang dioptimalkan untuk model AI yang dapat membuat gambar langsung (ChatGPT, Gemini, Midjourney).
+- **Skill Baru: `microdrama-webseries-director`**:
+  - Penulisan naskah dan penyutradaraan serial micro-drama vertikal 9:16 untuk platform media sosial modern (TikTok, Instagram Reels, YouTube Shorts, ReelShort, DramaBox).
+  - Struktur kilat 60–90 detik per episode dengan formula *Hook 3 detik* ekstrem untuk memikat penonton seketika, *micro-twist*, dan *cliffhanger* memikat.
+  - Perlindungan *Safe UI Zone* (area bebas tombol like/komentar dan teks caption) serta rangkaian prompt keyframe adegan multi-shot untuk generator gambar/video AI.
+- **Skill Baru: `magazine-layout-editor`**:
+  - Tata letak majalah dan zine profesional berbasis grid 2-kolom dan 3-kolom standar A4 dan US Letter.
+  - Anatomi sampul majalah lengkap: Masthead judul utama di atas, tanggal edisi/volume, tajuk utama (*lead headline*), dan teaser topik sampingan.
+  - Elemen tipografi editorial: *pull-quotes* berukuran besar, huruf kapital pembuka (*drop-caps* 3 baris), kotak kutipan samping (*callout box*), dan prompt fotografi editorial majalah.
+- **Prompting Terpadu dalam Satu Berkas (`visual_production_bible.md`)**:
+  - Berkas master panduan prompt visual all-in-one yang siap disalin langsung ke model AI pembuat gambar (ChatGPT, Gemini, Midjourney) dalam satu file praktis.
+  - Menjaga konsistensi wajah dan kostum tokoh melalui lembar *turnaround* 3 sudut pandang (Depan, Tiga Perempat, Samping), ilustrasi sampul, dan bingkai panel manga.
+- **Preset Format Baru pada Ekspor DOCX**:
+  - Penambahan preset cetak langsung pada generator naskah Word [`helpers/python/generate_fiction_docx.py`](helpers/python/generate_fiction_docx.py):
+    - `manga_b6` (128 × 182 mm dengan marjin jilid 1.8 cm)
+    - `storybook_square` (200 × 200 mm untuk buku cerita anak bergambar)
+    - `magazine_a4` (210 × 297 mm dengan format editorial 3 kolom)
+    - Preset yang sudah ada: `asadel_id`, `asadel_intl`, `novel_13x19`, `a5`, dan `a4`.
 
 ---
 
