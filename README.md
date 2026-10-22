@@ -11,7 +11,7 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 23 AI agent skills designed for authoring **novels**, **fiction books**, **manga & comic graphic novels**, **interactive Ren'Py visual novels**, **children's picture books**, **editorial magazines & zines**, **Wattpad web-novels**, **vertical micro-dramas (TikTok/Reels/ReelShort)**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, dynamic manga/comic framing (slanted cuts, frame-breaking, double-page splash), Ren'Py visual novel scripting (branching menus, ATL animations, BGM/SFX audio cue sheets), magazine editorial layouts (A4 multi-column, mastheads, pull-quotes), storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical micro-drama directing, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
+**Fiction Book Agent Skills** is a specialized collection of 24 AI agent skills designed for authoring **novels**, **fiction books**, **manga & comic graphic novels**, **interactive Ren'Py visual novels**, **ISEKAI ZERO interactive storylines & RPG mechanics**, **children's picture books**, **editorial magazines & zines**, **Wattpad web-novels**, **vertical micro-dramas (TikTok/Reels/ReelShort)**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, dynamic manga/comic framing (slanted cuts, frame-breaking, double-page splash), Ren'Py visual novel scripting (branching menus, ATL animations, BGM/SFX audio cue sheets), ISEKAI ZERO modular storylines (Dungeon Mind stats, transparent foreground PNG sprites, location tags), magazine editorial layouts (A4 multi-column, mastheads, pull-quotes), storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical micro-drama directing, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
 
 ### Installation
 
@@ -87,13 +87,14 @@ flowchart TD
         O --> P3["fiction-video-reels-director (BookTok & Reels Video)"]
         O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
         O --> P5["renpy-visual-novel-exporter (Playable Ren'Py .rpy + Audio + ATL)"]
+        O --> P6["isekaizero-storyline-architect (ISEKAI ZERO Storylines & DM Rules)"]
         P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
     end
 ```
 
 ---
 
-### Agent Taxonomy (23 Specialist Skills)
+### Agent Taxonomy (24 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -120,13 +121,14 @@ flowchart TD
 | `microdrama-webseries-director` | Vertical 9:16 micro-drama web series director. | 60-90s episode beats (Hook, micro-twist, extreme cliffhanger), safe UI zone, character consistency, & keyframe visual prompts. | `microdrama_production/*.md` |
 | `magazine-layout-editor` | Editorial magazine & creative zine editor. | A4/US Letter multi-column grids, masthead cover anatomy, teasers, pull-quotes, drop-caps, & high-fashion editorial photo prompts. | `magazine_production/*.md` |
 | `renpy-visual-novel-exporter` | Interactive Ren'Py Visual Novel game exporter. | Dialogue-to-syntax conversion, branching choice menus (`menu:`), ATL animation transforms, BGM/SFX audio cue sheets, & asset manifests. | `renpy_build/game/*.rpy` |
+| `isekaizero-storyline-architect` | ISEKAI ZERO interactive storyline architect. | Modular storyline system prompts, Dungeon Mind (DM) RPG stats/dice rules, character cards, & Visual Novel mode transparent sprite prompts. | `isekaizero_build/*` |
 
 ---
 
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 23 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **manga & komik graphic novel**, **game visual novel interaktif Ren'Py**, **buku cerita anak bergambar**, **majalah editorial & zine**, **web-novel Wattpad**, **serial micro-drama vertikal (TikTok/Reels/ReelShort)**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, tata letak bingkai manga dinamis (*slanted cuts, frame-breaking, double-page splash*), penulisan script game visual novel Ren'Py (menu pilihan percabangan, animasi ATL sprite, audio cue BGM/SFX), tata letak majalah multi-kolom (A4/US Letter, masthead, pull-quotes), skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara micro-drama vertikal 9:16, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 24 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **manga & komik graphic novel**, **game visual novel interaktif Ren'Py**, **alur cerita interaktif & mekanika RPG ISEKAI ZERO**, **buku cerita anak bergambar**, **majalah editorial & zine**, **web-novel Wattpad**, **serial micro-drama vertikal (TikTok/Reels/ReelShort)**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don'Tell"*, tata letak bingkai manga dinamis (*slanted cuts, frame-breaking, double-page splash*), penulisan script game visual novel Ren'Py (menu pilihan percabangan, animasi ATL sprite, audio cue BGM/SFX), arsitektur alur cerita ISEKAI ZERO modular (Dungeon Mind RPG, prompt sprite PNG transparan dengan emosi, sinkronisasi latar), tata letak majalah multi-kolom (A4/US Letter, masthead, pull-quotes), skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara micro-drama vertikal 9:16, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
 
 ### Panduan Instalasi
 
@@ -202,13 +204,14 @@ flowchart TD
         O --> P3["fiction-video-reels-director (Video BookTok & Reels)"]
         O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
         O --> P5["renpy-visual-novel-exporter (Game Ren'Py .rpy + Audio + ATL)"]
+        O --> P6["isekaizero-storyline-architect (Storyline & DM ISEKAI ZERO)"]
         P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
     end
 ```
 
 ---
 
-### Daftar Agen & Spesialisasi (23 Skills)
+### Daftar Agen & Spesialisasi (24 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -235,6 +238,33 @@ flowchart TD
 | `microdrama-webseries-director` | Sutradara serial micro-drama vertikal 9:16. | Struktur episode 60-90 detik (Hook, micro-twist, cliffhanger ekstrem), safe UI zone, konsistensi aktor, & keyframe visual AI. | `microdrama_production/*.md` |
 | `magazine-layout-editor` | Editor tata letak majalah & zine editorial. | Grid 2-3 kolom A4/US Letter, anatomi cover masthead, teasers, pull-quotes, drop-caps, & prompt foto editorial majalah. | `magazine_production/*.md` |
 | `renpy-visual-novel-exporter` | Eksportir game Visual Novel interaktif Ren'Py. | Konversi dialog ke syntax `.rpy`, menu pilihan bercabang (`menu:`), animasi ATL gerak sprite, cue audio BGM/SFX, & manifes aset. | `renpy_build/game/*.rpy` |
+| `isekaizero-storyline-architect` | Arsitek alur cerita interaktif platform ISEKAI ZERO. | Modul alur cerita modular, aturan RPG Dungeon Mind (DM stats/dice), profil karakter interaktif, & prompt sprite transparan dengan emosi. | `isekaizero_build/*` |
+
+---
+
+## What's New in v2.0.0 (Changelog)
+
+### 🌟 English
+- **New Skill: `isekaizero-storyline-architect`**:
+  - Full automated design, structuring, and prompt formatting for **ISEKAI ZERO** ([isekaizero.ai](https://isekaizero.ai/)) storylines and characters adhering strictly to the official [Creator's Guides](https://docs.isekaizero.ai/books/creators-guides).
+  - Modular storyline architecture (*The Art of AI Storytelling* & *How to Use Modules to Structure a Story* standards): Act breakdowns, event triggers, memory flags, and dynamic user agency for `{{user}}`.
+  - **Dungeon Mind (DM) Mechanics Engine**: In-prompt game mechanics agent tracking HP, tension, affection/loyalty gauges, inventory items, and impartial dice roll / skill check evaluations.
+  - **Visual Novel Mode Asset Generator**: Foreground character sprites prompt generator with transparent background (PNG) and emotion tags (*neutral, blushing, shocked, angry, smile*) plus synchronized background environment prompts with location tags for automatic scene transitions.
+  - Formatted character cards with core motivations, pressure vulnerabilities, speech quirks, and example dialogue sets.
+- **New Helper: `helpers/python/generate_isekaizero_package.py`**:
+  - Automatically converts any manuscript chapter into a ready-to-paste ISEKAI ZERO package (`storyline_system_prompt.txt`, `character_cards.txt`, `dungeon_mind_rules.txt`, `initial_message.txt`, and `visual_asset_manifest.md`).
+- **Milestone: 24 Specialized Creative Writing Agent Skills**.
+
+### 🌟 Bahasa Indonesia
+- **Skill Baru: `isekaizero-storyline-architect`**:
+  - Perancangan lengkap alur cerita interaktif dan karakter untuk platform **ISEKAI ZERO** ([isekaizero.ai](https://isekaizero.ai/)) sesuai standar resmi panduan kreator [Creator's Guides](https://docs.isekaizero.ai/books/creators-guides).
+  - Arsitektur naskah modular (standar panduan top creator ISEKAI ZERO): pembagian babak (*Acts*), pemicu peristiwa (*event triggers*), penanda memori, dan fleksibilitas tindakan pengguna (`{{user}}`).
+  - **Mesin Mekanika Dungeon Mind (DM)**: Agen mekanika game RPG di dalam prompt yang melacak HP, tingkat ketegangan, skor kedekatan/afeksi, inventaris item, dan kalkulasi konsekuensi aksi.
+  - **Paket Aset Visual Novel Mode**: Generator prompt sprite karakter PNG berlatar transparan dengan penanda emosi (*neutral, blushing, shocked, angry, smile*) serta prompt latar belakang dengan *location tags* untuk transisi adegan otomatis.
+  - Kartu karakter mendalam mencakup motivasi inti, titik insecure/tekanan batin, gaya tutur khas, dan contoh dialog patokan.
+- **Utilitas Generator Baru: `helpers/python/generate_isekaizero_package.py`**:
+  - Mengonversi naskah cerita fiksi secara instan menjadi 1 paket berkas siap salin ke Creator Centre ISEKAI ZERO.
+- **Pencapaian: Total 24 AI Agent Skills Spesialis Fiksi**.
 
 ---
 

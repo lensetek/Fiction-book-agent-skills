@@ -1,7 +1,7 @@
 {
   "name": "fiction-book-agent-skills",
-  "version": "1.9.0",
-  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, manga/comic paneling, storybooks, magazine/editorial layouts, Ren'Py visual novel game scripting, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, Wattpad serialization, vertical micro-dramas (TikTok/Reels), automated daily updates, and publisher-grade print/digital layout export.",
+  "version": "2.0.0",
+  "description": "Collection of specialized AI agent skills for fiction writing, novel authoring, manga/comic paneling, storybooks, magazine/editorial layouts, Ren'Py visual novel game scripting, ISEKAI ZERO interactive storylines & RPG mechanics, worldbuilding, character psychology, narrative architecture, dialogue polishing, real-time market trend research, braille accessibility, cover design, Wattpad serialization, vertical micro-dramas (TikTok/Reels), automated daily updates, and publisher-grade print/digital layout export.",
   "author": "Fiction Book Agent Skills Contributors",
   "license": "MIT",
   "homepage": "https://github.com/lensetek/Fiction-book-agent-skills",
@@ -33,6 +33,9 @@
     "renpy",
     "visual-novel",
     "game-scripting",
+    "isekaizero",
+    "roleplay",
+    "dungeon-mind",
     "micro-drama",
     "booktok",
     "twin-vision-braille",
@@ -65,6 +68,7 @@
     "manga-graphic-novel-artisan",
     "microdrama-webseries-director",
     "magazine-layout-editor",
-    "renpy-visual-novel-exporter"
+    "renpy-visual-novel-exporter",
+    "isekaizero-storyline-architect"
   ]
 }
