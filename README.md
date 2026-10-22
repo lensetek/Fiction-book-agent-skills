@@ -11,19 +11,31 @@
 ## English
 
 ### Overview
-**Fiction Book Agent Skills** is a specialized collection of 22 AI agent skills designed for authoring **novels**, **fiction books**, **manga & comic graphic novels**, **children's picture books**, **editorial magazines & zines**, **Wattpad web-novels**, **vertical micro-dramas (TikTok/Reels/ReelShort)**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, dynamic manga/comic framing (slanted cuts, frame-breaking, double-page splash), magazine editorial layouts (A4 multi-column, mastheads, pull-quotes), storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical micro-drama directing, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
+**Fiction Book Agent Skills** is a specialized collection of 23 AI agent skills designed for authoring **novels**, **fiction books**, **manga & comic graphic novels**, **interactive Ren'Py visual novels**, **children's picture books**, **editorial magazines & zines**, **Wattpad web-novels**, **vertical micro-dramas (TikTok/Reels/ReelShort)**, and **inclusive Braille accessibility books**. Built on an **orchestrator + specialist agents** pattern, it guides authors from initial high-concept ideas, real-time market trend research, and worldbuilding to character psychology, 3-act narrative architecture, scene drafting, dynamic manga/comic framing (slanted cuts, frame-breaking, double-page splash), Ren'Py visual novel scripting (branching menus, ATL animations, BGM/SFX audio cue sheets), magazine editorial layouts (A4 multi-column, mastheads, pull-quotes), storybook formatting, Braille conversion, continuity checking, All-In-One Visual Production Bible (`visual_production_bible.md`), Zero-Key AI image generation (Pollinations FLUX), cover design specifications, Wattpad web-novel serialization, vertical micro-drama directing, automated daily updates, and publisher-grade print/digital layout export (including PT. Asadel Liamsindo Teknologi & Asadel Publisher presets).
 
 ### Installation
 
-#### Primary CLI Installation
-Install via the **`npx skills`** CLI:
+#### 1. Global Installation for AI Agents (One-Prompt Universal Setup)
+Copy and paste this instruction directly into your AI Assistant prompt (Google Antigravity, Claude Code, Cursor, Codex, ChatGPT) to install these skills **globally** so they are available across all your fiction projects:
+
+```text
+Please install and register the Fiction Book Agent Skills globally from https://github.com/lensetek/Fiction-book-agent-skills so they are accessible across all my creative writing and fiction projects.
+```
+
+> **For `npx skills` users (Global Flag)**:
+> ```bash
+> npx skills add https://github.com/lensetek/Fiction-book-agent-skills -g
+> ```
+
+#### 2. Project-Local CLI Installation
+To install only for the current workspace/repository:
 
 ```bash
 npx skills add https://github.com/lensetek/Fiction-book-agent-skills
 ```
 
-#### Alternative Prompt-Based Installation
-Or copy and paste the repository URL directly into your AI Assistant prompt (Google Antigravity, Claude Code, Codex, Cursor, ChatGPT):
+#### 3. Direct Repository URL Reference
+Or link the repository directly in your assistant prompt:
 
 ```text
 https://github.com/lensetek/Fiction-book-agent-skills
@@ -74,13 +86,14 @@ flowchart TD
         O --> P2["wattpad-publisher-formatter (Wattpad Serialization)"]
         O --> P3["fiction-video-reels-director (BookTok & Reels Video)"]
         O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
+        O --> P5["renpy-visual-novel-exporter (Playable Ren'Py .rpy + Audio + ATL)"]
         P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
     end
 ```
 
 ---
 
-### Agent Taxonomy (22 Specialist Skills)
+### Agent Taxonomy (23 Specialist Skills)
 
 | Agent / Skill | Description | Main Tasks | Main Output |
 | :--- | :--- | :--- | :--- |
@@ -106,25 +119,38 @@ flowchart TD
 | `manga-graphic-novel-artisan` | Japanese Manga & Graphic Novel specialist. | Tankobon B6/A5 sizes, dynamic slanted cuts, frame-breaking, double-page splash, screentone B&W, & negative space for balloons. | `manga_production/*.md` |
 | `microdrama-webseries-director` | Vertical 9:16 micro-drama web series director. | 60-90s episode beats (Hook, micro-twist, extreme cliffhanger), safe UI zone, character consistency, & keyframe visual prompts. | `microdrama_production/*.md` |
 | `magazine-layout-editor` | Editorial magazine & creative zine editor. | A4/US Letter multi-column grids, masthead cover anatomy, teasers, pull-quotes, drop-caps, & high-fashion editorial photo prompts. | `magazine_production/*.md` |
+| `renpy-visual-novel-exporter` | Interactive Ren'Py Visual Novel game exporter. | Dialogue-to-syntax conversion, branching choice menus (`menu:`), ATL animation transforms, BGM/SFX audio cue sheets, & asset manifests. | `renpy_build/game/*.rpy` |
 
 ---
 
 ## Bahasa Indonesia
 
 ### Ringkasan
-**Fiction Book Agent Skills** adalah koleksi 22 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **manga & komik graphic novel**, **buku cerita anak bergambar**, **majalah editorial & zine**, **web-novel Wattpad**, **serial micro-drama vertikal (TikTok/Reels/ReelShort)**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, tata letak bingkai manga dinamis (*slanted cuts, frame-breaking, double-page splash*), tata letak majalah multi-kolom (A4/US Letter, masthead, pull-quotes), skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara micro-drama vertikal 9:16, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
+**Fiction Book Agent Skills** adalah koleksi 23 *AI Agent Skills* khusus untuk penulisan **novel**, **buku fiksi**, **manga & komik graphic novel**, **game visual novel interaktif Ren'Py**, **buku cerita anak bergambar**, **majalah editorial & zine**, **web-novel Wattpad**, **serial micro-drama vertikal (TikTok/Reels/ReelShort)**, dan **buku aksesibilitas Braille inklusif**. Menggunakan pola **orchestrator + spesialis**, repositori ini memandu penulis dari ide kasar, riset pasar & tren fiksi live di internet, perancangan dunia (*worldbuilding*), psikologi tokoh, arsitektur plot (3-Act / Save the Cat), penulisan adegan *"Show, Don't Tell"*, tata letak bingkai manga dinamis (*slanted cuts, frame-breaking, double-page splash*), penulisan script game visual novel Ren'Py (menu pilihan percabangan, animasi ATL sprite, audio cue BGM/SFX), tata letak majalah multi-kolom (A4/US Letter, masthead, pull-quotes), skrip panel komik & prompt AI, buku cerita anak berima, konversi Braille & Audio QR, audit kontinuitas garis waktu, desain sampul & perhitungan punggung buku, kit visual terpadu (*Visual Production Bible*), generator gambar gratis tanpa kunci (Pollinations FLUX), serialisasi Wattpad & pemicu Vote ⭐/Komentar, sutradara micro-drama vertikal 9:16, pemantauan pembaruan otomatis harian, hingga ekspor tata letak **buku cetak fisik** (preset PT. Asadel Liamsindo Teknologi & Asadel Publisher) maupun **e-book digital**.
 
 ### Panduan Instalasi
 
-#### Cara Utama (CLI Installer)
-Instal menggunakan CLI **`npx skills`**:
+#### 1. Instalasi Global untuk AI Agent (Prompt Universal Siap Salin)
+Salin instruksi prompt di bawah ini langsung ke prompt AI Assistant Anda (Google Antigravity, Claude Code, Cursor, Codex, ChatGPT) untuk memasang skills ini secara **global** agar dapat digunakan di semua proyek fiksi Anda:
+
+```text
+Tolong install dan daftarkan Fiction Book Agent Skills secara global dari https://github.com/lensetek/Fiction-book-agent-skills agar dapat digunakan di seluruh proyek penulisan cerita dan fiksi saya.
+```
+
+> **Untuk pengguna `npx skills` (Flag Global)**:
+> ```bash
+> npx skills add https://github.com/lensetek/Fiction-book-agent-skills -g
+> ```
+
+#### 2. Instalasi Lokal per Direktori Proyek (CLI)
+Jika hanya ingin memasang pada folder/workspace proyek yang aktif saat ini:
 
 ```bash
 npx skills add https://github.com/lensetek/Fiction-book-agent-skills
 ```
 
-#### Cara Alternatif (Prompt URL)
-Or copy and paste the repository URL directly into your AI Assistant prompt (Google Antigravity, Claude Code, Codex, Cursor, ChatGPT):
+#### 3. Referensi Tautan Prompt Langsung
+Atau cukup salin URL repositori ke prompt asisten AI:
 
 ```text
 https://github.com/lensetek/Fiction-book-agent-skills
@@ -175,13 +201,14 @@ flowchart TD
         O --> P2["wattpad-publisher-formatter (Serialisasi Wattpad)"]
         O --> P3["fiction-video-reels-director (Video BookTok & Reels)"]
         O --> P4["braille-accessibility-formatter (Twin-Vision & EPUB3)"]
+        O --> P5["renpy-visual-novel-exporter (Game Ren'Py .rpy + Audio + ATL)"]
         P1 --> Q["web_reader/ (Mobile-First Web Reader)"]
     end
 ```
 
 ---
 
-### Daftar Agen & Spesialisasi (22 Skills)
+### Daftar Agen & Spesialisasi (23 Skills)
 
 | Agent / Skill | Deskripsi | Tugas Utama | Output Utama |
 | :--- | :--- | :--- | :--- |
@@ -207,6 +234,31 @@ flowchart TD
 | `manga-graphic-novel-artisan` | Spesialis Manga Jepang & Graphic Novel. | Standar Tankobon B6/A5, framing miring aksi, efek tembus panel, double-page splash, screentone B&W, & negative space balon kata. | `manga_production/*.md` |
 | `microdrama-webseries-director` | Sutradara serial micro-drama vertikal 9:16. | Struktur episode 60-90 detik (Hook, micro-twist, cliffhanger ekstrem), safe UI zone, konsistensi aktor, & keyframe visual AI. | `microdrama_production/*.md` |
 | `magazine-layout-editor` | Editor tata letak majalah & zine editorial. | Grid 2-3 kolom A4/US Letter, anatomi cover masthead, teasers, pull-quotes, drop-caps, & prompt foto editorial majalah. | `magazine_production/*.md` |
+| `renpy-visual-novel-exporter` | Eksportir game Visual Novel interaktif Ren'Py. | Konversi dialog ke syntax `.rpy`, menu pilihan bercabang (`menu:`), animasi ATL gerak sprite, cue audio BGM/SFX, & manifes aset. | `renpy_build/game/*.rpy` |
+
+---
+
+## What's New in v1.9.0 (Changelog)
+
+### 🌟 English
+- **New Skill: `renpy-visual-novel-exporter`**:
+  - Full automated conversion of fiction manuscripts, narrative beats, and dialogues into ready-to-run **Ren'Py Visual Novel scripts** (`.rpy`).
+  - Interactive branching narrative support via `menu:` choice blocks with player state flags (e.g., affection points, discovery flags).
+  - Built-in audio management: Background music transitions (`play music ... fadein 2.0 loop`), sound effects (`play sound ...`), and ambient environmental audio.
+  - Ren'Py Animation and Transformation Language (ATL) transforms: Smooth stage entrance/exit (`masuk_dari_kiri`, `masuk_dari_kanan`), startled jumps (`lompat_kaget`), idle breathing, and screen transitions (`with dissolve`, `with vpunch`, `with hpunch`).
+  - Complete output package: `script.rpy`, `definitions.rpy`, `transforms.rpy`, and `asset_manifest.md` (AI prompt specs for background art, character sprite emotions, and Suno/Udio BGM generation).
+- **Python Helper Utility (`helpers/python/export_to_renpy.py`)**:
+  - Standalone script parser that extracts characters, dialogue lines, emotions, background changes, sound cues, and interactive choices into game-engine compliant Ren'Py files.
+
+### 🌟 Bahasa Indonesia
+- **Skill Baru: `renpy-visual-novel-exporter`**:
+  - Konversi otomatis naskah fiksi, dialog adegan, dan papan cerita menjadi skrip game **Visual Novel Ren'Py** (`.rpy`) siap main.
+  - Dukungan narasi interaktif bercabang melalui blok `menu:` pilihan pemain dan variabel state permainan (poin kedekatan tokoh, pencarian petunjuk).
+  - Tata kelola audio terpadu: Musik latar bersambung halus (`play music ... fadein 2.0 loop`), efek suara aksi (`play sound ...`), dan suara atmosfer lingkungan.
+  - Animasi visual ATL (*Animation and Transformation Language*): Pergerakan sprite masuk/keluar panggung, animasi karakter kaget melompat (`lompat_kaget`), nafas idle, serta efek guncangan layar benturan (`with hpunch`, `with vpunch`).
+  - Paket berkas lengkap: `script.rpy`, `definitions.rpy`, `transforms.rpy`, dan `asset_manifest.md` (panduan prompt gambar background, ekspresi sprite tokoh, dan musik BGM).
+- **Utilitas Generator Python (`helpers/python/export_to_renpy.py`)**:
+  - Skrip parser mandiri untuk mengekstraksi naskah Markdown menjadi berkas Ren'Py terstruktur tanpa konfigurasi manual.
 
 ---
 
